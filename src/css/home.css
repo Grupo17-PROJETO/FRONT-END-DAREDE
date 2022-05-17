@@ -1,0 +1,187 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+
+.corFundoH2 {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.pranchinha{
+
+    width: 17px;
+    height: 15px;
+    
+    margin-left: 5px;
+
+   
+
+
+}
+
+.nave2{
+
+    display: flex;
+    margin-right: 161px;
+
+}
+
+.nave2 a{
+
+   color: white;
+   text-decoration: none;
+   font-size: 12px;
+}
+
+/* ---------------------------------------- */
+
+
+.fundodivhome{
+
+display: flex;
+justify-content: center;
+
+}
+
+.servicoshome{
+
+display: flex;
+justify-content: space-evenly;
+
+}
+
+
+.enviar_email{
+
+    width: 450px;
+    height: 408px;
+    border: 1px solid white;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.enviar_email h4{
+
+   color: white;
+   margin-bottom: 20px;
+   margin-left: 127px;
+
+}
+
+.enviar_email p{
+
+    color: white;
+ 
+ }
+
+.inputhome{
+
+    color: black;
+    width: 400px;
+    margin-bottom: 20px;
+ 
+ }
+
+.enviar_email button{
+
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    margin-left: 150px;
+   
+ 
+ }
+
+.imgfundohome{
+
+    height: 640px;
+    width: 100%;
+
+
+}
+
+.bloquinhos2{
+
+
+    display: flex;
+
+    margin-top: 65px;
+    
+
+}
+
+.VPCHOME{
+
+    width: 400px;
+    height: 254px;
+    border: 1px solid white;
+
+}
+
+.EC2HOME{
+
+    width: 400px;
+    height: 254px;
+    border: 1px solid white;
+    margin-left: 70px;
+    
+    }
+
+
+    .cordefundo{
+
+
+        background-color: black;
+      
+    
+    
+    }
+    
+    .divdiv{
+    
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    
+    }
+
+    .datahome{
+
+        width: 200px;
+
+    }
+
+
+    .servicoshome{
+
+        font-size: 12px;
+        
+
+
+    }
+
+
+
+    /* --------------------------------------- */
+
+    .corFundoF2 {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid;
+    }
+
+
