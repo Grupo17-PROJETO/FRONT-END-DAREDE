@@ -1,24 +1,9 @@
-
-import Modal_VPC from "../../components/Modal";
 import '../../css/empresa.css'
-import { Component } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
-import Fake from '../../img/imgCliente/iagemFake.jpg'
-import IconeUsuario from '../../img/imgCliente/iconeUsuario.png'
-import VPC from '../../img/imgCliente/VPC.png'
-import EC2 from '../../img/imgCliente/EC2.png'
-import prancheta from '../../img/imgCliente/prancheta.png'
 import boneco from "../../img/imgCliente/boneco_listagem.png"
 import sair from '../../img/imgCliente/sair.png'
-import localizacao from '../../img/imgCliente/localizacao.png'
-import telefone from '../../img/imgCliente/telefone.png'
-import insta from '../../img/imgCliente/instagram.png'
-import linkedin from '../../img/imgCliente/linkedin.png'
-import whats from '../../img/imgCliente/whats.png'
 import chatboot from '../../img/imgCliente/icone_chat.png'
-import Modal_EC2 from "../../components/Modal_EC2";
 import Sair from '../../img/imgCliente/sair.png'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -85,13 +70,12 @@ function ListaCadastroClientes() {
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
+                        <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaCadastroClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
                         <a href="/VPC">Cadastro VPC</a>
-                        {/* <a href="/CadastroFuncionario">Cadastro Funcionarios</a>
-                        <a href="">Listagem Funcionarios</a> */}
-                        <img onClick={Sair} className='sair' src={sair} alt="" />
+                        <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
             </header>

@@ -1,23 +1,9 @@
 import React, { useState } from "react";
-import Modal_VPC from "../../components/Modal";
 import '../../css/home.css'
 import Fundo from '../../img/imgHome/fundo.png'
-import { Component } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
-import IconeUsuario from '../../img/imgCliente/iconeUsuario.png'
 import VPC from '../../img/imgCliente/VPC.png'
 import EC2 from '../../img/imgCliente/EC2.png'
-import prancheta from '../../img/imgCliente/prancheta.png'
-import boneco from "../../img/imgCliente/boneco_listagem.png"
-import sair from '../../img/imgCliente/sair.png'
-import localizacao from '../../img/imgCliente/localizacao.png'
-import telefone from '../../img/imgCliente/telefone.png'
-import insta from '../../img/imgCliente/instagram.png'
-import linkedin from '../../img/imgCliente/linkedin.png'
-import whats from '../../img/imgCliente/whats.png'
-import chatboot from '../../img/imgCliente/icone_chat.png'
-import Modal_EC2 from "../../components/Modal_EC2";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import icone_login from '../../img/imgHome/icone_login.png'
 

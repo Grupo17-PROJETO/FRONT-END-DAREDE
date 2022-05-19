@@ -1,0 +1,132 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+.centro{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.centro h1{
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400, Regular;
+  font-style: normal;
+
+}
+
+.digitacao{
+  justify-content: center;
+  display: inline-flex;
+}
+
+.lado1{
+  margin-top: 80px;
+}
+
+.fundob1{
+  width: 450px;
+  margin-top: 18px;
+}
+
+.bloco1{
+  width: 400px;
+  height: 480px;
+  background-color: green;
+  position: relative;
+  opacity: 64%;
+}
+
+.bloco2{
+  width: 400px;
+  height: 480px;
+  background-color: #02750E;
+  position: absolute;
+  margin-top: 28px;
+  margin-right: 125px;
+}
+
+.bloco3{
+  width: 400px;
+  height: 480px;
+  background-color: black;
+  position: absolute;
+  margin-top: 59px;
+  margin-right: 65px;
+}
+
+.logoo{
+
+  align-items: center;
+  justify-content: center;
+  padding-left: 72px;
+  padding-bottom: 26px;
+  margin-top: 35px;
+
+}
+
+.estilizacaoI{
+  color: white;
+  border-radius: 21px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 28px;
+  margin-top: 25px;
+}
+
+.estilizacaoI p {
+
+  font-size: 12px;
+  margin: 8px;
+
+}
+
+.estilizacaoI input{
+  border-radius: 21px;
+  width: 320px;
+  height: 30px;
+  background-color: #B7B8B7 ;
+  color: gray;
+    padding-left: 23px;
+    
+}
+
+#botao {
+  font-size: medium;
+  font-family: arial;
+  background-color:#02750E;
+  border-radius: 50px;
+  color: white;
+  height: 30px;
+  width: 100px;
+  margin: 72px 120px;
+}
+
+
+
+/*BOT�O VAI PRA FRENTE*/
+
+#botao:hover {
+font-size:15px;
+font-family: arial;
+background-color: black;
+color: white;
+box-shadow: 0 0 10px yellow;
+}
+
+
+.temporario{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+
+}
