@@ -11,7 +11,7 @@ import axios from "axios";
 
 function ListaCadastroClientes() {
     const [users, getUsers] = useState([]);
-    const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes'
+    const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes/adicionargrupo'
 
     useEffect(() => {
         listagemUsuarios();
@@ -30,24 +30,7 @@ function ListaCadastroClientes() {
 
             .catch(error => console.error(`Erro: ${error}`));
 
-        // axios.get(url)
-        //     .then((res1) => {
-        //         const listagememail = res1.data.data.listagememail;
-        //         getUsers(listagememail);
-        //         console.log(res1)
-        //     })
-
-        //     .catch(error => console.error(`Erro: ${error}`));
-
-        // axios.get(url)
-        //     .then((res2) => {
-        //         const listagemcelular = res2.data.data.listagemcelular;
-        //         getUsers(listagemcelular);
-        //         console.log(res2)
-
-        //     })
-
-        //     .catch(error => console.error(`Erro: ${error}`));
+        
     }
     const listagemEmail = () => {
 
@@ -74,7 +57,6 @@ function ListaCadastroClientes() {
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
-                        <a href="/VPC">Cadastro VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>

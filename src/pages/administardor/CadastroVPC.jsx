@@ -8,43 +8,19 @@ import UserPool from '../../components/UserPool'
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
 export default function CadastroVPC() {
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-    const [nome, setNome] = useState("");
-    const [nascimento, setNascimento] = useState("");
-    const [celular, setCelular] = useState("");
-    const [endereco, setEndereco] = useState("");
+    
+    const [AMI, setAMI] = useState("");
+    const [TYPE, setTYPE] = useState("");
+    const [KEY, setKEY] = useState("");
+    const [TAG, setTAG] = useState("");
+
 
     const onSubmit = (event) => {
         event.preventDefault();
-        UserPool.signUp(
-            email, senha,
-            [
-                { Name: 'given_name', Value: nome },
-                { Name: 'birthdate', Value: nascimento },
-                { Name: 'phone_number', Value: celular },
-                { Name: 'address', Value: endereco }
-            ],
-            null, (err, data) => {
-                if (err) { console.log(err); }
-                console.log(data.user)
-            });
+        
     };
 
-    function Limpar() {
-        document.onSubmit.nome.value = "";
-        document.onSubmit.nascimento.value = "";
-        document.onSubmit.celular.value = "";
-        document.onSubmit.endereco.value = "";
-        document.onSubmit.nome.focus();
-    }
 
-    function Sair() {
-
-
-
-
-    }
 
 
     return (
@@ -82,7 +58,6 @@ export default function CadastroVPC() {
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
-                        <a href="/VPC">Cadastro VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
@@ -164,7 +139,7 @@ export default function CadastroVPC() {
 
                         <p>EMAIL:</p>
                         <label htmlFor="email"></label>
-                        <input type="email" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                        <input type="email" placeholder='ex: email@email.com' className='solitarioss' name='Email' ></input>
 
                         {/* <p>FUNCIONARIO:</p>
                         <label htmlFor="email"></label>
@@ -173,14 +148,14 @@ export default function CadastroVPC() {
 
                         <p>ENDEREÇO:</p>
                         <label htmlFor="address"></label>
-                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={endereco} onChange={(event) => setEndereco(event.target.value)}></input>
+                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco'></input>
 
                         <div className='parte2'>
 
                             <div>
                                 <p>DATA DE NASCIMENTO:</p>
                                 <label htmlFor="birthdate"></label>
-                                <input type="date" value={nascimento} name='Data' onChange={(event) => setNascimento(event.target.value)}></input>
+                                <input type="date"  name='Data'></input>
                             </div>
                         </div>
 
@@ -189,7 +164,7 @@ export default function CadastroVPC() {
                             <div>
                                 <p>CELULAR:</p>
                                 <label htmlFor="phone"></label>
-                                <input type="tel" placeholder='ex: 5511999552288' value={celular} name='Celular' onChange={(event) => setCelular(event.target.value)}></input>
+                                <input type="tel" placeholder='ex: 5511999552288' name='Celular'></input>
                             </div>
 
                         </div>
@@ -197,12 +172,12 @@ export default function CadastroVPC() {
                         <div>
                             <p>CRIAR SENHA:</p>
                             <label htmlFor="password"></label>
-                            <input type="password" className='solitarioss' name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
+                            <input type="password" className='solitarioss' name='Senha'></input>
                         </div>
 
                         <div>
                             <button type='submit' className='cadastrarbtn'>Cadatrar</button>
-                            <button className='cancelarbtn' onClick={Limpar}>Cancelar</button>
+                            <button className='cancelarbtn'>Cancelar</button>
                         </div>
 
 
