@@ -12,6 +12,16 @@ import icone_login from '../../img/imgHome/icone_login.png'
 function Home() {
 
 
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"52bdeedeba6b4aa21e99cc515d0a0cc8","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+
+
 
     return (
 
@@ -58,13 +68,13 @@ function Home() {
 
 
                             <section className="section_ec2B" >
-                                <img className="blcimg" src={VPC} alt="" />
+                                <img className="blcima_home" src={VPC} alt="" />
                                 <h4>VPC</h4>
                             </section>
                             <section className="section_ec2A">
 
 
-                                <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
+                                <p className="paragrafo1_home">Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
 
                             </section>
 
@@ -73,13 +83,13 @@ function Home() {
                         <div className="EC2HOME">
 
                             <section className="section_ec2B" >
-                                <img className="blcimg" src={EC2} alt="" />
+                                <img className="blcima_home" src={EC2} alt="" />
                                 <h4>EC2</h4>
                             </section>
                             <section className="section_ec2A">
 
 
-                                <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
+                                <p className="paragrafo1_home">O Amazon Virtual Private Cloud é um serviço comercial de computação em nuvem que fornece aos usuários uma nuvem virtual privada, "fornecendo [uma] seção logicamente isolada do Amazon Web Services Cloud".</p>
 
                             </section>
 
@@ -88,7 +98,7 @@ function Home() {
                     </div>
 
 
-                    <div className="enviar_email">
+                    {/* <div className="enviar_email">
                         <form action="">
                             <h4>REALIZAR ORÇAMENTO</h4>
                             <p>Empresa</p>
@@ -121,7 +131,7 @@ function Home() {
                         </form>
 
 
-                    </div>
+                    </div> */}
 
 
 

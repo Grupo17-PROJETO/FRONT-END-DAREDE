@@ -18,9 +18,8 @@
 
 .pranchinha{
 
-    width: 25px;
-    height: 15px;
-    
+    width: 37px;
+    height: 24px;
     margin-left: 5px;
 
    
@@ -119,8 +118,27 @@ justify-content: space-evenly;
 
     display: flex;
     margin-top: 65px;
-    margin-left: 89px;
     
+    
+
+}
+
+.blcima_home{
+
+
+    height: 80px;
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 110px;
+    margin-right: 27px;
+
+
+}
+
+.paragrafo1_home{
+
+    margin-left: 30px;
+    width: 325px;
 
 }
 

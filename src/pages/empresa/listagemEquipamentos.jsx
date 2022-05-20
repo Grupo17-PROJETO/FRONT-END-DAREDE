@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Modal_VPC from "../../components/Modal";
 import '../../css/empresa.css'
 import Logo from '../../img/imgLogin/darede.png'
@@ -15,32 +15,43 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-    const[isModalVisibleVPC, setIsModalVisibleVPC] = useState(false);
-    const[isModalVisibleEC2, setIsModalVisibleEC2] = useState(false);
+    const [isModalVisibleVPC, setIsModalVisibleVPC] = useState(false);
+    const [isModalVisibleEC2, setIsModalVisibleEC2] = useState(false);
 
-    return(
+    (function (d, m) {
+        var kommunicateSettings =
+            { "appId": "52bdeedeba6b4aa21e99cc515d0a0cc8", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+
+    return (
 
         <div>
 
-        <header>
-            <div className='corFundoH'>
+            <header>
+                <div className='corFundoH'>
 
-                <img className='logo' src={Logo} alt="" />
-                <div className='nave'>
-                    <a href="/MeusEquipamentos">Meus Equipamentos</a>
-                    <a href="/">Home</a>
-                    <a href="/Login" target="principal" ><img className='sair' src={sair} alt="" /></a>
+                    <img className='logo' src={Logo} alt="" />
+                    
+                    <div className='nave'>
+                        <a href="/ListagemEquipamentos">Listar Equipamentos</a>
+                        <a href="">Contato</a>
+                        <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
+
+                    </div>
+
+
+
+
                 </div>
 
 
+            </header>
+            <div className='divisaoPrinc2'>
 
-
-            </div>
-
-
-        </header>
-        <div className='divisaoPrinc2'>
-           
 
                 <div className='boneco'>
                     <img src={boneco} alt="" />
@@ -68,7 +79,7 @@ function App() {
                                 <center>
                                     <div>
                                         <button onClick={() => setIsModalVisibleVPC(true)} className='botaoEC2'> Mais Informações</button>
-                                        {isModalVisibleVPC ? <Modal_VPC onClose={() => setIsModalVisibleVPC(false) } />: null}
+                                        {isModalVisibleVPC ? <Modal_VPC onClose={() => setIsModalVisibleVPC(false)} /> : null}
                                     </div>
 
                                 </center>
@@ -85,9 +96,9 @@ function App() {
                                 <h2>EC2</h2>
                                 <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                 <center>
-                                <div>
+                                    <div>
                                         <button onClick={() => setIsModalVisibleEC2(true)} className='botaoEC22'> Mais Informações</button>
-                                        {isModalVisibleEC2 ? <Modal_EC2 onClose={() => setIsModalVisibleEC2(false) } />: null}
+                                        {isModalVisibleEC2 ? <Modal_EC2 onClose={() => setIsModalVisibleEC2(false)} /> : null}
                                     </div>
                                 </center>
                             </section>
@@ -104,13 +115,13 @@ function App() {
                 </div>
 
                 <div>
-                    <img className='chat' src={chatboot} alt="" />
+                    {/* <img className='chat' src={chatboot} alt="" /> */}
                 </div>
-            
+
+
+            </div>
 
         </div>
-
-    </div>
     );
 
 

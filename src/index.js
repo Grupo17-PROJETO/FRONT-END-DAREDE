@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Login from './pages/login/teladeLogin';
 import Home from './pages/Page_home/home';
-import ListaClientes from '../src/pages/funcionario/listaMeusClientes';
+import ListaClientes from '../src/pages/administardor/listadeCliente';
 import CadastroCliente from './pages/administardor/cadastroClientes'
 import MeusEquipamentos from './pages/empresa/meusEquipamentos';
 import MeusClientes from '../src/pages/funcionario/listaMeusClientes';

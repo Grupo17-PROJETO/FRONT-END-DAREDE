@@ -57,7 +57,7 @@ export default function Signup() {
                     <div className='nave'>
                         <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
-                        <a href="/ListaCadastroClientes">Listagem Clientes</a>
+                        <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
                         <a href="/VPC">Cadastro VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>

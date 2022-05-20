@@ -9,12 +9,20 @@ import novo from '../../img/imgCliente/b_novo.png'
 import chatboot from '../../img/imgCliente/icone_chat.png'
 
 
-export default class meusEquipamentos extends Component {
 
 
+export default function meusEquipamentos() {
 
 
-    render() {
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"52bdeedeba6b4aa21e99cc515d0a0cc8","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+
 
         return (
             <div>
@@ -26,7 +34,7 @@ export default class meusEquipamentos extends Component {
                         <div className='nave'>
                             <a href="/ListagemEquipamentos">Listar Equipamentos</a>
                             <a href="">Contato</a>
-                            <a href="/" target="principal" ><img className='sair' src={sair} alt="" /></a>
+                            <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
 
                         </div>
 
@@ -47,13 +55,13 @@ export default class meusEquipamentos extends Component {
                     <div className='blocoCentralPrincipal'>
 
                         <div>
-                            <div className='divisao'>
+                            <div className='divisao_meus'>
                                 <img src={prancheta} alt="" />
                                 <h1>MEUS EQUIPAMENTOS</h1>
                             </div>
 
 
-                            <div className='blocoCentral'>
+                            <div className='blocoCentral_Meus_equipamentos'>
 
                                 <section >
                                     <img className='blcimg' src={VPC} alt="" />
@@ -75,7 +83,7 @@ export default class meusEquipamentos extends Component {
 
                             </div>
 
-                            <div className='blocoCentral'>
+                            <div className='blocoCentral_Meus_equipamentos'>
                                 <section >
                                     <img className='blcimg' src={EC2} alt="" />
                                 </section>
@@ -101,7 +109,7 @@ export default class meusEquipamentos extends Component {
 
                     </div>
                     <div>
-                        <img className='chat' src={chatboot} alt="" />
+                        {/* <img className='chat' src={chatboot} alt="" /> */}
                     </div>
 
                 </div>
@@ -110,5 +118,4 @@ export default class meusEquipamentos extends Component {
 
             </div>
         )
-    }
 }

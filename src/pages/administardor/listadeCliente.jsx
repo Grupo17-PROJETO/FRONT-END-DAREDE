@@ -72,7 +72,7 @@ function ListaCadastroClientes() {
                     <div className='nave'>
                         <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
-                        <a href="/ListaCadastroClientes">Listagem Clientes</a>
+                        <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
                         <a href="/VPC">Cadastro VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
@@ -80,14 +80,14 @@ function ListaCadastroClientes() {
                 </div>
             </header>
             <div className='divisaoPrinc2'>
-                <div className='divisaoFundo'>
+                
                     <div className='boneco'>
                         <img src={boneco} alt="" />
                     </div>
-                    <div className='blocoCentralPrincipal'>
+                    <div className='blocoCentralPrincipal_Lista_CLientes'>
                         <div>
-                            <div className='divisao'>
-                                <h1>Lista de Clientes</h1>
+                            <div className='divisao_listagem_cliente'>
+                                <h1 className='lista_do_map'>Lista de Clientes</h1>
                             </div>
                             <div >
                                 {
@@ -95,7 +95,7 @@ function ListaCadastroClientes() {
 
                                         console.log(res)
                                         return (
-                                            <div className='blocoCentral'>
+                                            <div className='blocoCentral_Lista_Clientes'>
                                                 <div key={res.data}>
                                                     <div className="informacoes">
                                                         <section className="separacao" >
@@ -120,44 +120,9 @@ function ListaCadastroClientes() {
                     <div>
                         <img className='chat' src={chatboot} alt="" />
                     </div>
-                </div>
+               
             </div>
-            <footer className='corFundoF'>
-                <div className='divisaoF'>
-                </div>
-            </footer>
         </div>
     );
 }
 export default ListaCadastroClientes
-
-{/* <div class="LARANJAO">
-
-{
-    ListarConsultas.map((consulta) => {
-
-        return (
-            <div key={consulta.idPaciente}>
-                <div className="brancao">
-
-                    <section className="lista">
-                        <ul className="separacao">
-                            <li>Paciente: {consulta.idPacienteNavigation.nomePaciente}</li>
-                            <li>Médico: {consulta.idMedicoNavigation.nomeMedico} </li>
-                            <li>Especialidade:{consulta.idMedicoNavigation.idEspecialidadeNavigation.nomeEspecialidade}</li>
-                            <li>Data/Hora:{Intl.DateTimeFormat("pt-BR", {
-                                year: 'numeric', month: 'numeric', day: 'numeric',
-                                hour: 'numeric', minute: 'numeric', hour12: true
-                            }).format(new Date(consulta.dataHora))}</li>
-                            <li>Descrição:{consulta.descricao}</li>
-                            <li>Situação:{consulta.idSituacaoNavigation.tipoSituacao}</li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        )
-    })
-}
-
-
-</div> */}

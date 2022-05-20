@@ -71,11 +71,10 @@ margin-right: 20px;
 
 }
 
-.sair{
+.sair_empresa{
 
     width: 15px;
     height: 15px;
-    margin-top: 5px;
 
 }
 
@@ -96,7 +95,7 @@ margin-right: 20px;
 
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 
  }
@@ -134,6 +133,8 @@ margin-right: 20px;
     border-right: 2px solid #000000;border-right: 2px solid #000000;
     
 }
+
+
 
 .posicaoI{
 
@@ -215,8 +216,23 @@ margin-right: 20px;
 .boneco2 img{
 
     justify-content: flex-start;
-    width: 194px;
-    margin-top: 375px;
+    width: 247px;
+    margin-top: 384px;
+
+}
+
+.blocoCentralPrincipal_Meus_CLientes{
+
+    margin: 81px 86px;
+
+}
+
+.blocoCentralPrincipal_Lista_CLientes{
+
+    margin: 53px 86px;
+    height: 550px;
+    padding-right: 44px;
+    overflow: overlay;
 
 }
 
@@ -266,31 +282,16 @@ margin-right: 20px;
 
 }
 
-.divisao img{
-
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    margin-top: 3px;
-
-}
-
-.divisao h1{
-
-    font-size: 21px;
-    
-}
-
-
 
 .blocoCentral{
 
     height: 150px;
     width: 550px;
     border: 2px solid #000000;
-    margin-bottom: 15px ;
+    margin-bottom: 15px;
     border-radius: 10px;
     display: flex;
+    margin-right: 139px;
 
 }
 
@@ -309,6 +310,90 @@ margin-right: 20px;
 .blocoCentral h2{
     font-size: 14px;
 }
+
+
+.divisao_meus{
+
+
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+
+}
+
+.divisao img{
+
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-top: 3px;
+
+}
+
+.divisao h1{
+
+    font-size: 21px;
+    margin-right: 135px;
+    
+}
+
+.blocoCentral_Meus_equipamentos{
+
+    height: 150px;
+    width: 550px;
+    border: 2px solid #000000;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    margin-right: 221px;
+
+}
+
+.blocoCentral_Lista_Clientes{
+
+    height: 150px;
+    width: 550px;
+    border: 2px solid #000000;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.lista_do_map{
+
+    margin-bottom: 26px;
+    margin-left: 166px;
+
+
+}
+
+.divisao_meus h1{
+
+    font-size: 21px;
+    margin-right: 230px;
+
+}
+
+.divisao_meus img{
+
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-top: 3px;
+
+}
+
+
+.blocoCentral_Meus_equipamentos p{
+    font-size: 12px;
+}
+
+.blocoCentral_Meus_equipamentos h2{
+    font-size: 14px;
+}
+
+
 
 .informacoes{
 

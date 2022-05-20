@@ -13,6 +13,50 @@
 
   }
 
+/* .blocoCentralPrincipal_adm {
+    margin: 81px 86px;
+    overflow: auto;
+    height: 565px;
+} */
+
+.divisao_listagem_cliente{
+
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+
+}
+
+
+.blocoCentral{
+
+  height: 150px;
+  width: 550px;
+  border: 2px solid #000000;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  margin-right: 139px;
+
+}
+
+.blcimg{
+  height: 80px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 27px;
+}
+
+.blocoCentral_listagem_cliente p{
+  font-size: 12px;
+}
+
+.blocoCentral_listagem_cliente h2{
+  font-size: 14px;
+}
+
+
 
 .Coluna_Linhas{
 
