@@ -6,7 +6,6 @@ import Home from './pages/Page_home/home';
 import ListaClientes from '../src/pages/administardor/listadeCliente';
 import CadastroCliente from './pages/administardor/cadastroClientes'
 import MeusEquipamentos from './pages/empresa/meusEquipamentos';
-import MeusClientes from '../src/pages/funcionario/listaMeusClientes';
 import App from './pages/empresa/listagemEquipamentos';
 import EC2 from '../src/pages/administardor/CadastroEC2'
 import VPC from '../src/pages/administardor/CadastroVPC'
@@ -37,8 +36,6 @@ const Routing = (
         <Route path="/EC2" element={<EC2/>}></Route>
         <Route path="/VPC" element={<VPC/>}></Route>
 
-        {/* TELAS DE Funcionarios */}
-        <Route path="/MeusClientes" element={<MeusClientes/>}></Route>
       
 
         {/* TELAS DE Clientes */}

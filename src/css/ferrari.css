@@ -1,0 +1,185 @@
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.body_login_ferrari{
+    background-color: black;
+    background-image: url(../img/imgHome/fundo_ferrari.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top bottom;
+    overflow: hidden;
+    height: 753px;
+    
+}
+
+/* ::::::HEADER:::::::: */
+
+.header_ferrari{
+
+    width: 100%;
+    height: 50px;
+    border:none;
+    border-top: none;
+    
+}
+
+.Divisao_header_ferrari{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.divisao_logo_header_ferrari{
+    margin-left: 236px;
+}
+
+.img_logo_header_ferrari{
+    width: 84px; 
+}
+
+.divisao_casa_header_ferrari{
+    margin-right: 200px;
+}
+
+
+.img_casa_header_ferrari{
+
+    width: 24px;
+    height: 26px;   
+    margin: 13px 14px 0px 0px
+  
+}
+
+.img_sacola_header_ferrari{
+
+    width: 16px;
+    height: 19px;
+    margin: 2px 17px;
+}
+
+.img_saida_header_ferrari{
+
+    width: 23px;
+
+  
+}
+
+
+
+
+
+
+/* ::::::HEADER = FIM:::::::: */
+
+
+
+/* ::::::ROLAGEM DE IMAGEM:::::::: */
+
+.rua{
+
+    width: 374px;
+
+}
+
+
+.content{
+
+    height: 595px;
+    width: 1035px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 17%;
+    left: 30%;
+
+
+}
+
+.navigation{
+
+    position: absolute;
+    bottom: 20px;
+    left: 53%;
+    transform: translate(-50%);
+    display: flex;
+    top: 512px;
+}
+
+.bar{
+
+
+    width: 70px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 6px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+.bar:hover{
+
+    background-color: black;
+
+}
+
+.radios{
+
+    display: none;
+
+}
+
+.slides{
+
+    display: flex;
+    width: 500%;
+    height: 100%;
+
+
+}
+
+.slide{
+
+    width: 20%;
+    transition: .8s;
+
+}
+
+.slide img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+#slide1:checked ~ .s1{
+
+    margin-left: 0;
+
+}
+
+#slide2:checked ~ .s1{
+
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1{
+
+    margin-left: -80%;
+}
+
+/* ::::::ROLAGEM DE IMAGEM = FIM:::::::: */
