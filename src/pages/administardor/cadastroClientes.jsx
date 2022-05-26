@@ -4,6 +4,9 @@ import Logo from '../../img/imgLogin/darede.png'
 import sair from '../../img/imgCliente/sair.png'
 import ganhos from '../../img/imgCliente/ganhos.png'
 import UserPool from '../../components/UserPool'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
@@ -15,6 +18,7 @@ export default function Signup() {
     const [celular, setCelular] = useState("");
     const [endereco, setEndereco] = useState("");
     const [grupo, setGrupo] = useState("");
+    
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -24,38 +28,16 @@ export default function Signup() {
                 { Name: 'given_name', Value: nome },
                 { Name: 'birthdate', Value: nascimento },
                 { Name: 'phone_number', Value: celular },
-                { Name: 'address', Value: endereco }
+                { Name: 'address', Value: endereco },
+                
+                
             ],
             null, (err, data) => {
                 if (err) { console.log(err); }
                 console.log(data.user)
+                toast.success("Cadastrado com Sucesso!!")
             });
     };
-
-    function Limpar() {
-        document.onSubmit.nome.value = "";
-        document.onSubmit.nascimento.value = "";
-        document.onSubmit.celular.value = "";
-        document.onSubmit.endereco.value = "";
-        document.onSubmit.nome.focus();
-    };
-
-    // const grupoC = (e) => {
-    //     e.preventDefault();
-
-    //     let config = {
-    //         headers: {
-    //             email: email,
-    //             grupo: grupo,
-    //         }
-    //     }
-
-    //     axios.post('https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes/adicionargrupo', config)
-    //         .then((res) => {
-    //             console.log(`Usuário adicionado${res.data}`)
-    //         })
-    //         .catch(error => console.error(`Erro: ${error}`));
-    // }
 
     return (
 
@@ -69,7 +51,7 @@ export default function Signup() {
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="/EC2">Cadastro EC2</a>
-                        <a href="/login" ><img className='sair' src={sair} alt="" /></a>
+                        <a href="/" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
             </header>
@@ -84,25 +66,25 @@ export default function Signup() {
                     <h1 className='cima'>Cadatro de Clientes</h1>
                     <form onSubmit={onSubmit}>
 
-                        <p>EMPRESA:</p>
+                        <p className='paragro__'>Empresa:</p>
                         <div className='parte1'>
                             <label htmlFor="name"></label>
                             <input value={nome} placeholder='ex: Scania Latim America' name='Nome' onChange={(event) => setNome(event.target.value)}></input>
                         </div>
 
-                        <p>EMAIL:</p>
+                        <p className='paragro__'>Email:</p>
                         <label htmlFor="email"></label>
                         <input type="email" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={email} onChange={(event) => setEmail(event.target.value)}></input>
 
 
-                        <p>ENDEREÇO:</p>
+                        <p className='paragro__'>Endereço:</p>
                         <label htmlFor="address"></label>
                         <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={endereco} onChange={(event) => setEndereco(event.target.value)}></input>
 
                         <div className='parte2'>
 
                             <div>
-                                <p>DATA ATUAL:</p>
+                                <p className='paragro__'>Data Atual:</p>
                                 <label htmlFor="birthdate"></label>
                                 <input type="date" value={nascimento} name='Data' onChange={(event) => setNascimento(event.target.value)}></input>
                             </div>
@@ -111,26 +93,25 @@ export default function Signup() {
 
                         <div className='parte4'>
                             <div>
-                                <p>CELULAR:</p>
+                                <p className='paragro__'>Celular:</p>
                                 <label htmlFor="phone"></label>
-                                <input type="tel" placeholder='ex: 5511999552288' value={celular} name='Celular' onChange={(event) => setCelular(event.target.value)}></input>
+                                <input type="tel" placeholder='ex: +5511999552288' value={celular} name='Celular' onChange={(event) => setCelular(event.target.value)}></input>
                             </div>
 
                         </div>
 
                         <div>
-                            <p>CRIAR SENHA:</p>
+                            <p className='paragro__'>Criar Senha:</p>
                             <label htmlFor="password"></label>
                             <input type="password" className='solitarioss' name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
                         </div>
 
                         <div>
                             <button type='submit' className='cadastrarbtn'>Cadatrar</button>
-                            <button className='cancelarbtn' onClick={Limpar}>Cancelar</button>
                         </div>
 
                     </form>
-
+                    <ToastContainer />
                 </div>
 
             </div>

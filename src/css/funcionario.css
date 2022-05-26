@@ -41,7 +41,7 @@ height: 619px;
 }
 
 
-.nave a{
+.navegation{
 
     text-transform: none;
     text-decoration: none;
@@ -51,6 +51,51 @@ height: 619px;
     margin-top: 5px;
 
 }
+.navegation1{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+.navegation2{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+.navegation3{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+
+.navegation4{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
 
 .imgHeader{
 
@@ -75,10 +120,14 @@ margin-right: 20px;
 
     width: 15px;
     height: 15px;
-    margin-top: 5px;
 
 }
 
+.paragro__{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
 
 
  /* ................................... */
@@ -193,9 +242,6 @@ margin-right: 20px;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 17px;
-    border-radius: 5px;
-    border: 2px solid gray; 
-    box-shadow: 7px 6px 11px #a6abbd;
 }
 
 
@@ -211,23 +257,18 @@ margin-right: 20px;
 
 .solitarios{
 
-    width: 800px;
+    width: 500px;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 17px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    box-shadow: 7px 6px 11px #a6abbd;
 }
+
 .solitarioss{
 
     width: 500px;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 17px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    box-shadow: 7px 6px 11px #a6abbd;
 
 }
 
@@ -252,10 +293,6 @@ margin-right: 20px;
     margin-top: 5px;
     margin-right: 5px;
     margin-bottom: 11px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    box-shadow: 7px 6px 11px #a6abbd;
-    
     
 
 }
@@ -278,23 +315,21 @@ margin-right: 20px;
     margin-top: 5px;
     margin-right: 5px;
     margin-bottom: 11px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    box-shadow: 7px 6px 11px #a6abbd;
+   
     
 }
 
 .cadastrarbtn{
 
-
     width: 100px;
     height: 30px;
     margin-right: 80px;
-    margin-left: 98px;
+    margin-left: 201px;
     background-color: green;
     color: white;
     border-radius: 5px;
-    border: 0px solid ;
+    border: 0px solid;
+    margin-top: 32px;
 
 
 }

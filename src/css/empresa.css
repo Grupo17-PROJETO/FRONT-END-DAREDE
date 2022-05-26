@@ -4,6 +4,8 @@
     box-sizing: border-box;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
 
 
 
@@ -107,7 +109,8 @@ margin-right: 20px;
 
     margin-top: 35px;
     margin-bottom: 31px;
-    margin-left: 115px;
+    margin-left: 89px;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 
   }

@@ -107,6 +107,13 @@
     align-items: center;
 }
 
+.nave_logo{
+
+    width: 26px;
+    margin-right: 130px;
+
+}
+
 .navigation{
 
     position: absolute;

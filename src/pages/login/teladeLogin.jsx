@@ -46,10 +46,11 @@ export default function Login() {
           if (grupo === 'Funcionarios') navigate("/MeusClientes")
           else if (grupo === 'Clientes') navigate("/ListagemEquipamentos")
           else if (grupo === 'Administrador') navigate("/cadastroCliente")
+          toast.success("Login Valido")
           
        
       },
-      onFailure: (err) => {
+        onFailure: (err) => {
         setLoading(false)
         setMsg(true)
         console.error("onFailure: ", err);

@@ -45,17 +45,12 @@ function Home() {
             <header>
                 <div className='corFundoH_Home'>
 
-                    <img className='logo' src={Logo} alt="" />
-
-                    <div className='nave'>
-                        <a href="/ListagemEquipamentos">Listar Equipamentos</a>
-                        <a href="">Contato</a>
-                        <a href="/" target="principal" ></a>
-
-                    </div>
+                        <img className='logo' src={Logo} alt="" />
 
 
-
+                        <div className='nave2'>
+                            <a href="/login" ><img className='nave_logo' src={icone_login} alt="" /></a>
+                        </div>
 
                 </div>
 
