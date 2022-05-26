@@ -32,20 +32,20 @@ function ListaCadastroClientes() {
 
         
     }
-    const listagemEmail = () => {
+    // const listagemEmail = () => {
 
-            axios.get(url)
-            .then((res1) => {
-                const listagememail = res1.data.data.listagememail;
-                getUsers(listagememail);
-                console.log(res1)
-            })
+    //         axios.get(url)
+    //         .then((res1) => {
+    //             const listagememail = res1.data.data.listagememail;
+    //             getUsers(listagememail);
+    //             console.log(res1)
+    //         })
 
-            .catch(error => console.error(`Erro: ${error}`));
+    //         .catch(error => console.error(`Erro: ${error}`));
 
 
 
-    }
+    // }
 
     return (
         <div>
