@@ -74,7 +74,7 @@ export default function CadastroEC2() {
                     </div>
                 </div>
             </header>
-            {/* <div className='divisaoPrin'>
+            <div className='divisaoPrin'>
                 <div className='divisaoFundo'>
                     <div>
                         <img className='imagem_lado_d' src={ganhos} alt="" />
@@ -83,10 +83,8 @@ export default function CadastroEC2() {
                 </div>
                 <div className='Coluna_Linhas'>
                     <h1 className='cima'>Cadatro de EC2</h1>
-                    <form onSubmit={listagemUsuarios}>
-                      
-
-
+                    <form onSubmit={criacaoec2}>
+                     
                         <p>AMI:</p>
                         <label htmlFor="email"></label>
                         <input type="text" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
@@ -116,19 +114,16 @@ export default function CadastroEC2() {
 
                         <div>
                         </div>
-                            <button type="submit" className=''>Cadatrar</button>
+                        <button type="submit" value={(ec2)} onChange={(event) => setEc2(event.target.value)}>CRIAR</button>
 
 
                     </form>
 
                 </div>
 
-            </div> */}
+            </div>
 
-            <h1>Testezinho</h1>
-            <form onSubmit={criacaoec2}>
-                <button type="submit" value={(ec2)} onChange={(event) => setEc2(event.target.value)}>CRIAR</button>
-            </form>
+           
 
         </div>
 
