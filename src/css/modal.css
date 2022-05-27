@@ -7,24 +7,26 @@
     left: 0;
     z-index: 10;
     background-color: rgba(0,0,0,0.8);
-    padding-top: 327px;
-    padding-left: 662px;
+    padding-top: 318px;
+    padding-left: 491px;
 
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
 .fundo_Modal{
 
-width: 400px;
-height: 300px;
-border: 3px solid black;
-position: absolute;
-background-color: white;
+    width: 551px;
+    height: 317px;
+    border: 3px solid black;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    margin-top: -104px;
+    border-radius: 5px;
 
-justify-content: center;
-display: flex;
-margin-top: -104px;
-border-radius: 5px;
 }
 
 
@@ -47,8 +49,16 @@ padding-left: 40px;
 
 .vpc img{
 
-    margin-left: 81px;;
-    margin-bottom: 10px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    width: 88px;
+
+}
+
+.txt{
+
+    width: 448px;
 
 }
 
@@ -78,33 +88,17 @@ padding-left: 40px;
 /*-------------- ------------- */
 
 
-.fundaoModal{
-
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.8);
-    padding-top: 327px;
-    padding-left: 662px;
-
-
-}
-
 .fundo_Modall{
 
-width: 400px;
-height: 300px;
-border: 3px solid black;
-position: absolute;
-background-color: white;
-
-justify-content: center;
-display: flex;
-margin-top: -104px;
-border-radius: 5px;
+    width: 554px;
+    height: 323px;
+    border: 3px solid black;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    margin-top: -104px;
+    border-radius: 5px;
 }
 
 
@@ -129,14 +123,16 @@ padding-left: 40px;
     width: 20px;
     height: 20px;
     margin-top: 28px;
+    cursor: pointer;
 
 }
 
 
 .ec2 img{
 
-    margin-left: 102px;
-    margin-bottom: 10px;
+    margin-left: 101px;
+    margin-bottom: 19px;
+    margin-top: 28px;
 
 }
 
@@ -145,6 +141,9 @@ padding-left: 40px;
     margin-left: 4px;
     margin-right: 4px;
     margin-bottom: 25px;
+    width: 454px;
+
+
 
 }
 

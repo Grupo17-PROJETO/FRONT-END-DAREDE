@@ -40,6 +40,23 @@ height: 619px;
     margin-right: 161px;
 }
 
+.nave2{
+
+    
+    height: 67px;
+    margin-right: 144px;
+    width: 58px ;
+    background-color: #005C1A;
+
+}
+
+.nave2:hover{
+
+    
+    background-color: green;
+
+}
+
 
 .navegation{
 

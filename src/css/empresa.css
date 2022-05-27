@@ -337,6 +337,7 @@ margin-right: 20px;
 
     font-size: 21px;
     margin-right: 135px;
+    font-family: 'Montserrat Alternates', sans-serif;
     
 }
 
@@ -402,38 +403,48 @@ margin-right: 20px;
 
     padding-left: 50px;
     margin-top: 15px;
+    
+
+}
+
+.informacoes h2{
+
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
 .informacoes p{
 
     margin-bottom: 5px;
+    
 
 }
 
 .botaoEC2{
 
-    height: 20px;
-    width: 150px;
+    height: 25px;
+    width: 122px;
     background-color: #F58735;
     border-radius: 5px;
     margin-top: 12px;
     margin-right: 14px;
     color: white;
-    font-size: 12px;
+    font-size: 9px;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
 .botaoEC22{
 
-    height: 20px;
-    width: 150px;
+    height: 25px;
+    width: 122px;
     background-color: #F58735;
     border-radius: 5px;
     margin-top: 12px;
     margin-right: 14px;
     color: white;
-    font-size: 12px;
+    font-size: 9px;
+    font-family: 'Montserrat Alternates', sans-serif;
     
 
 }
