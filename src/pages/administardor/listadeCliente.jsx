@@ -14,46 +14,19 @@ function ListaCadastroClientes() {
     const [grupo, setGrupo] = useState('');
     const [email, getEmail] = useState([]);
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes/grupos'
-    const urll = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes'
-    const teste = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/teste'
-
     useEffect(() => {
-        listagemEmail();
         listagemUsuarios();
     }, []);
 
     const listagemUsuarios = () => {
-        // let config = {
-        //     headers:{
-        //         grupo:Clientes
-        //     }
-        // }
-        axios.get(teste, {
-            headers: {
-                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true',
-                'Access-Control-Allow-Methods': 'GET,OPTIONS',
-                'Content-Type': 'application/json',
-                'grupo': grupo
-            }
-        })
+        const options = {
+            method: 'GET',
+            headers: {'grupo': grupo}
+        }
+        axios.get(url, options)
             .then((res) => {
                 const usuarios = res.data.data.usuarios;
                 getUsers(usuarios);
-                console.log(res)
-            })
-            .then((headers) => {
-                console.log(headers)
-            })
-            .catch(error => console.error(`Erro: ${error}`));
-    }
-
-    const listagemEmail = () => {
-        axios.get(urll)
-            .then((res1) => {
-                const listagememail = res1.data.data.listagememail;
-                getEmail(listagememail);
             })
             .catch(error => console.error(`Erro: ${error}`));
     }
@@ -83,15 +56,14 @@ function ListaCadastroClientes() {
                             <h1 className='lista_do_map'>Lista de Clientes</h1>
                         </div>
                         <div >
-                            {/* <form onSubmit={listagemUsuarios}>
+                            <form action='#'>
                                 <label htmlFor="text"></label>
                                 <input type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
-                                <button type='submit' value={(users)} onChange={(event) => getUsers(event.target.value)}>Teste</button>
-                            </form> */}
+                                <input type="button" onClick={listagemUsuarios} />
+                            </form>
                             {
                                 users.map((res) => {
 
-                                    console.log(res)
                                     return (
                                         <div className='blocoCentral_Lista_Clientes'>
                                             <div key={res.data}>
@@ -111,6 +83,29 @@ function ListaCadastroClientes() {
                                     )
                                 })
                             }
+                            {/* {
+                                users.map((res, key) => {
+
+                                    console.log(res, key)
+                                    return (
+                                        <div className='blocoCentral_Lista_Clientes'>
+                                            <div>
+                                                <div className="informacoes">
+                                                    <section className="separacao" >
+                                                        <ul>
+                                                            <li>Nome: {res} </li>
+                                                            <li>Email: {key[1]}</li>
+                                                            <li>Celuar: {res2}</li> 
+                                                        </ul>
+                                                    </section>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    )
+                                })
+                            } */}
 
                         </div>
                     </div>
