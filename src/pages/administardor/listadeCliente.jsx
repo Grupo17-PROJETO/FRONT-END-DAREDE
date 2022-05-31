@@ -19,7 +19,7 @@ function ListaCadastroClientes() {
 
     useEffect(() => {
         listagemEmail();
-        //listagemUsuarios();
+        listagemUsuarios();
     }, []);
 
     const listagemUsuarios = () => {
@@ -83,11 +83,11 @@ function ListaCadastroClientes() {
                             <h1 className='lista_do_map'>Lista de Clientes</h1>
                         </div>
                         <div >
-                            <form onSubmit={listagemUsuarios}>
+                            {/* <form onSubmit={listagemUsuarios}>
                                 <label htmlFor="text"></label>
                                 <input type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
-                                <button type='submit' /* value={(users)} onChange={(event) => getUsers(event.target.value)}*/>Teste</button>
-                            </form>
+                                <button type='submit' value={(users)} onChange={(event) => getUsers(event.target.value)}>Teste</button>
+                            </form> */}
                             {
                                 users.map((res) => {
 
