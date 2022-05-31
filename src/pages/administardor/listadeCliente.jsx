@@ -25,9 +25,9 @@ function ListaCadastroClientes() {
         }
         axios.get(url, options)
             .then((res) => {
-                const usuarios = res.data.data.usuarios;
+                const users = res.data.data.usuarios;
                 console.log(res);
-                getUsers(usuarios);
+                getUsers(users);
             })
             .catch(error => console.error(`Erro: ${error}`));
     }

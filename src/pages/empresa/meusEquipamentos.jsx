@@ -21,7 +21,7 @@ export default function MeusEquipamentos() {
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
 
-
+    const [inst, setInst] = useState('')
     const [ec2, getEc2] = useState([]);
     const [regiao, setRegiao] = useState('');
     const urlget = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2'
@@ -49,7 +49,7 @@ export default function MeusEquipamentos() {
     const pararEc2 = () => {
         const options = {
             method: 'POST',
-            headers: { 'regiao': 'us-east-1', nomeinst: ec2.join([]) }
+            headers: { 'regiao': 'us-east-1', nomeinst: ec2 }
         }
         console.log(options);
         axios.post(urloff, options)
@@ -61,18 +61,15 @@ export default function MeusEquipamentos() {
 
     return (
         <div>
-
             <header>
-                <div className='corFundoH'>
 
+                <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
                         <a href="/ListagemEquipamentos">Listar Equipamentos</a>
                         <a href="">Contato</a>
                         <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
-
                     </div>
-
                 </div>
 
             </header>
@@ -86,7 +83,7 @@ export default function MeusEquipamentos() {
 
                     <form action='#'>
                         <label htmlFor="text"></label>
-                        {/* <input type="text" name='texto' value={ec2} onChange={(event) => setEc2(event.target.value)}></input> */}
+                        <input type="text" name='texto' value={inst} onChange={(event) => setInst(event.target.value)}></input>
                         <input type="button" onClick={pararEc2} />
                     </form>
 
