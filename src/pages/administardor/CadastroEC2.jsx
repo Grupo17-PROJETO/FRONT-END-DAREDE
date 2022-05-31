@@ -19,48 +19,20 @@ export default function CadastroEC2() {
     const [ec2, setEc2] = useState('');
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/criar'
 
-    const criacaoec2 = (event) => {
-        event.preventDefault();
-        axios.post(url)
+    const criacaoec2 = () => {
+        const options = {
+            method: 'POST',
+            headers: { 'AMI': AMI, 'Instance': TYPE, 'TAG': TAG }
+        }
+        axios.post(url, options)
             .then((res) => {
                 console.log(`Instancia criada ${res.data}`)
+                console.log(res)
             })
             .catch(error => console.error(`Erro: ${error}`));
     }
 
-
-
-
-
-
-
-    // function listagemUsuarios() {
-
-    //     let ec2 = {
-    //         AMI: AMI,
-    //         TYPE: TYPE,
-    //         KEY: KEY,
-    //         TAG: TAG
-
-    //     }
-
-    //     console.log(AMI)
-
-    //     axios.post('https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/criar', ec2)
-    //     .then((r)=>{
-    //         console.log(r)
-    //     })
-    //     .catch((err) => {
-    //         console.error(err);
-    //     })
-
-    // }
-
-
     return (
-
-
-
         <div>
             <header>
                 <div className='corFundoH'>
@@ -79,12 +51,12 @@ export default function CadastroEC2() {
                     <div>
                         <img className='imagem_lado_d' src={ganhos} alt="" />
                     </div>
-                   
+
                 </div>
                 <div className='Coluna_Linhas'>
                     <h1 className='cima'>Cadatro de EC2</h1>
-                    <form onSubmit={criacaoec2}>
-                     
+                    <form action='#'>
+
                         <p>AMI:</p>
                         <label htmlFor="email"></label>
                         <input type="text" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
@@ -94,38 +66,24 @@ export default function CadastroEC2() {
                         <label htmlFor="address"></label>
                         <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
 
-                   
 
-
-                        <div className='parte4'>
-                            <div>
-                                <p>KEY:</p>
-                                <label htmlFor="phone"></label>
-                                <input type="text" placeholder='ex: 5511999552288' value={KEY} name='Celular' onChange={(event) => setKEY(event.target.value)}></input>
-                            </div>
-
-                        </div>
-
-                        <div>
-                            <p>TAG:</p>
-                            <label htmlFor="password"></label>
-                            <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
-                        </div>
+                        <p>TAG:</p>
+                        <label htmlFor="password"></label>
+                        <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
 
                         <div>
                         </div>
-                        <button type="submit" value={(ec2)} onChange={(event) => setEc2(event.target.value)}>CRIAR</button>
 
-
+                        <label htmlFor="text"></label>
+                        <input type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
                     </form>
+
 
                 </div>
 
             </div>
 
-           
-
-        </div>
+        </div >
 
     );
 };

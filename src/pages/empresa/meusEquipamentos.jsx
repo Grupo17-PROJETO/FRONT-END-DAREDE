@@ -21,7 +21,7 @@ export default function MeusEquipamentos() {
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
 
-    const [inst, setInst] = useState('')
+    const [inst, setInst] = useState();    
     const [ec2, getEc2] = useState([]);
     const [regiao, setRegiao] = useState('');
     const urlget = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2'
@@ -49,7 +49,7 @@ export default function MeusEquipamentos() {
     const pararEc2 = () => {
         const options = {
             method: 'POST',
-            headers: { 'regiao': 'us-east-1', nomeinst: ec2 }
+            headers: { 'regiao': 'us-east-1', nomeinst: `"${inst}"` }
         }
         console.log(options);
         axios.post(urloff, options)
@@ -87,11 +87,11 @@ export default function MeusEquipamentos() {
                         <input type="button" onClick={pararEc2} />
                     </form>
 
-                    <form action='#'>
+                    {/* <form action='#'>
                         <label htmlFor="text"></label>
                         <input type="text" name='texto' value={regiao} onChange={(event) => setRegiao(event.target.value)}></input>
                         <input type="button" onClick={listarEc2} />
-                    </form>
+                    </form> */}
                     {
                         ec2.map((res) => {
                             return (
