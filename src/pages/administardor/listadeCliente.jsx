@@ -21,7 +21,7 @@ function ListaCadastroClientes() {
     const listagemUsuarios = () => {
         const options = {
             method: 'GET',
-            headers: {'grupo': grupo}
+            headers: { 'grupo': grupo }
         }
         axios.get(url, options)
             .then((res) => {
@@ -63,10 +63,9 @@ function ListaCadastroClientes() {
                             </form>
                             {
                                 users.map((res) => {
-
                                     return (
                                         <div className='blocoCentral_Lista_Clientes'>
-                                            <div key={res.data}>
+                                            <div key={res}>
                                                 <div className="informacoes">
                                                     <section className="separacao" >
                                                         <ul>
@@ -77,9 +76,7 @@ function ListaCadastroClientes() {
                                                     </section>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     )
                                 })
                             }

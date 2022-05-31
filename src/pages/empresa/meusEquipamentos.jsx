@@ -1,5 +1,5 @@
 import '../../css/empresa.css'
-import { Component, useState } from 'react';
+import { Component, useEffect, useState } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
 import VPC from '../../img/imgCliente/VPC.png'
 import EC2 from '../../img/imgCliente/EC2.png'
@@ -21,15 +21,38 @@ export default function MeusEquipamentos() {
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
 
-    const [ec2, setEc2] = useState([]);
+
+    const [ec2, getEc2] = useState([]);
+    const [regiao, setRegiao] = useState('');
+    const urlget = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2'
+    const urloff = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/desligar'
+
+    useEffect(() => {
+        listarEc2();
+    }, []);
+
+    const listarEc2 = () => {
+        const options = {
+            method: 'GET',
+            headers: { 'regiao': regiao }
+        }
+        console.log(options);
+        axios.get(urlget, options)
+            .then((res) => {
+                console.log(res);
+                const ec2 = res.data.data.status;
+                getEc2(ec2);
+            })
+            .catch(error => console.error(`Erro: ${error}`));
+    }
 
     const pararEc2 = () => {
         const options = {
             method: 'POST',
-            headers: { 'regiao': 'us-east-1', nomeinst: ec2.join([ ]) }
+            headers: { 'regiao': 'us-east-1', nomeinst: ec2.join([]) }
         }
         console.log(options);
-        axios.post('https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/desligar', options)
+        axios.post(urloff, options)
             .then((res) => {
                 console.log(res);
             })
@@ -61,12 +84,36 @@ export default function MeusEquipamentos() {
 
                 <div className='blocoCentralPrincipal'>
 
-                    <form action='#'> 
+                    <form action='#'>
                         <label htmlFor="text"></label>
-                        <input type="text" name='texto' value={ec2} onChange={(event) => setEc2(event.target.value)}></input>
-                        <input type="button" onClick={pararEc2}/>
+                        {/* <input type="text" name='texto' value={ec2} onChange={(event) => setEc2(event.target.value)}></input> */}
+                        <input type="button" onClick={pararEc2} />
                     </form>
 
+                    <form action='#'>
+                        <label htmlFor="text"></label>
+                        <input type="text" name='texto' value={regiao} onChange={(event) => setRegiao(event.target.value)}></input>
+                        <input type="button" onClick={listarEc2} />
+                    </form>
+                    {
+                        ec2.map((res) => {
+                            return (
+                                <div className='blocoCentral_Lista_Clientes'>
+                                    <div key={res}>
+                                        <div className="informacoes">
+                                            <section className="separacao" >
+                                                <ul>
+                                                    <li>Estado: {res[0]}</li>
+                                                    <li>Estado2: {res[1]}</li>
+                                                    <li>Estado3: {res[2]}</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                     <div>
                         <div className='divisao_meus'>
                             <img src={prancheta} alt="" />
