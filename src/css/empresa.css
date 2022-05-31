@@ -84,6 +84,14 @@ margin-right: 20px;
 
  /* ................................... */
 
+ .input_busca{
+
+    width: 301px;
+    height: 25px;
+
+ }
+
+
  .divisaoPrin{
 
 
@@ -356,7 +364,7 @@ margin-right: 20px;
 .blocoCentral_Lista_Clientes{
 
     height: 150px;
-    width: 550px;
+    width: 342px;
     border: 2px solid #000000;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -364,10 +372,17 @@ margin-right: 20px;
 
 }
 
+.botaozinho{
+
+    width: 20px;
+
+}
+
 .lista_do_map{
 
     margin-bottom: 26px;
     margin-left: 166px;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 
 }

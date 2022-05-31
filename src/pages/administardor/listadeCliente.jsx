@@ -39,7 +39,7 @@ function ListaCadastroClientes() {
                     <div className='nave'>
                         <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
-                        <a href="/ListaClientes">Listagem Clientes</a>
+                        <a href="/ListaClientes">Listagem Usuario</a>
                         <a href="/EC2">Cadastro EC2</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
@@ -53,13 +53,21 @@ function ListaCadastroClientes() {
                 <div className='blocoCentralPrincipal_Lista_CLientes'>
                     <div>
                         <div className='divisao_listagem_cliente'>
-                            <h1 className='lista_do_map'>Lista de Clientes</h1>
+                            <h1 className='lista_do_map'>Lista de Usuarios</h1>
                         </div>
                         <div >
                             <form action='#'>
                                 <label htmlFor="text"></label>
-                                <input type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
-                                <input type="button" onClick={listagemUsuarios} />
+                                <div>
+                                    <input className='input_busca' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
+
+                                </div>
+
+                                <div>
+                                     <input className='botaozinho' type="button" onClick={listagemUsuarios} />
+                                </div>
+
+                                
                             </form>
                             {
                                 users.map((res) => {

@@ -49,7 +49,7 @@ export default function Signup() {
                     <div className='nave'>
                         <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
-                        <a href="/ListaClientes">Listagem Clientes</a>
+                        <a href="/ListaClientes">Listagem Usuarios</a>
                         <a href="/EC2">Cadastro EC2</a>
                         <a href="/" ><img className='sair' src={sair} alt="" /></a>
                     </div>
@@ -63,7 +63,7 @@ export default function Signup() {
 
                 </div>
                 <div className='Coluna_Linhas'>
-                    <h1 className='cima'>Cadatro de Clientes</h1>
+                    <h1 className='cima'>Cadastro de Clientes</h1>
                     <form onSubmit={onSubmit}>
 
                         <p className='paragro__'>Empresa:</p>
@@ -107,7 +107,7 @@ export default function Signup() {
                         </div>
 
                         <div>
-                            <button type='submit' className='cadastrarbtn'>Cadatrar</button>
+                            <button type='submit' className='cadastrarbtn'>Cadastrar</button>
                         </div>
 
                     </form>

@@ -110,6 +110,8 @@
   height: 30px;
   width: 100px;
   margin: 72px 120px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  
 }
 
 
@@ -121,7 +123,8 @@ font-size:15px;
 font-family: arial;
 background-color: black;
 color: white;
-box-shadow: 0 0 10px yellow;
+box-shadow: 0 0 10px green;
+
 }
 
 
@@ -130,5 +133,11 @@ box-shadow: 0 0 10px yellow;
     text-transform: none;
     text-decoration: none;
     color: white;
+
+}
+
+.email_senha{
+
+  font-family: 'Montserrat Alternates', sans-serif;
 
 }
