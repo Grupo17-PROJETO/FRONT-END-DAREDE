@@ -77,26 +77,16 @@ export default function Login() {
             <div className='estilizacaoI'>
 
               <form onSubmit={efetuarLogin}>
-                <p>EMAIL / USUARIO</p>
+                <p className='email_senha'>EMAIL / USUARIO</p>
                 <input type="name" id="name" value={(name)} onChange={(e) => setName(e.target.value)}></input>
 
-                <p>SENHA</p>
+                <p className='email_senha'>SENHA</p>
                 <input type="password" input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" name="senha" />
                 <button id="botao" type='submit'>Login</button>
               </form>
 
             </div>
             <ToastContainer />
-            {/* <div>
-              {
-                loading === true && <button type='submit' disabled id="botao"> Loading </button>
-              }
-              {
-                loading === false && <button id="botao" type="submit">
-                  Logar
-                </button>
-              }
-            </div> */}
           </div>
         </div>
       </div>
