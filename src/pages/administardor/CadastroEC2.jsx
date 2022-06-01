@@ -10,21 +10,23 @@ import axios from "axios";
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
 export default function CadastroEC2() {
-    const [AMI, setAMI] = useState("");
-    const [TYPE, setTYPE] = useState("");
-    const [KEY, setKEY] = useState("");
-    const [TAG, setTAG] = useState("");
+    const [AMI, setAMI] = useState('');
+    const [TYPE, setTYPE] = useState('');
+    const [TAG, setTAG] = useState('');
 
 
     const [ec2, setEc2] = useState('');
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/criar'
+    const teste = ''
 
     const criacaoec2 = () => {
-        const options = {
-            method: 'POST',
-            headers: { 'AMI': AMI, 'Instance': TYPE, 'TAG': TAG }
+        const config = {
+            
         }
-        axios.post(url, options)
+        const header = {
+            headers: { 'Ami': AMI, 'Instance': TYPE, 'Tag': TAG }
+        }
+        axios.post(url, config, {method: 'POST', headers: { 'Ami': AMI, 'Instance': TYPE, 'Tag': TAG } })
             .then((res) => {
                 console.log(`Instancia criada ${res.data}`)
                 console.log(res)
