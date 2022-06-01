@@ -78,6 +78,9 @@ export default function CadastroEC2() {
 
                         <label htmlFor="text"></label>
                         <input type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
+                        <div>
+                            <button type='submit' onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} >Cadastrar</button>
+                        </div>
                     </form>
 
 
