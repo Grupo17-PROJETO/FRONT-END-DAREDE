@@ -40,6 +40,7 @@ export default function MeusEquipamentos() {
         axios.get(urlget, options)
             .then((res) => {
                 console.log(res);
+                console.log(res.data);
                 const ec2 = res.data.data.status;
                 getEc2(ec2);
             })

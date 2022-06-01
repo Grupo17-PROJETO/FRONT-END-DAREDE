@@ -10,21 +10,23 @@ import axios from "axios";
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
 export default function CadastroEC2() {
-    const [AMI, setAMI] = useState("");
-    const [TYPE, setTYPE] = useState("");
-    const [KEY, setKEY] = useState("");
-    const [TAG, setTAG] = useState("");
+    const [AMI, setAMI] = useState('');
+    const [TYPE, setTYPE] = useState('');
+    const [TAG, setTAG] = useState('');
 
 
     const [ec2, setEc2] = useState('');
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/criar'
+    const teste = ''
 
     const criacaoec2 = () => {
-        const options = {
-            method: 'POST',
-            headers: { 'AMI': AMI, 'Instance': TYPE, 'TAG': TAG }
+        const config = {
+
         }
-        axios.post(url, options)
+        const header = {
+            headers: { 'Ami': AMI, 'Instance': TYPE, 'Tag': TAG }
+        }
+        axios.post(url, config, { method: 'POST', headers: { 'Ami': AMI, 'Instance': TYPE, 'Tag': TAG } })
             .then((res) => {
                 console.log(`Instancia criada ${res.data}`)
                 console.log(res)
@@ -38,7 +40,7 @@ export default function CadastroEC2() {
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
-                    <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
+                        <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuarios</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
@@ -53,6 +55,7 @@ export default function CadastroEC2() {
                     </div>
 
                 </div>
+                <form action="">
                 <div className='Coluna_Linhas'>
                     <div>
                         <h1 className='cima'>Cadatro de EC2/VPC</h1>
@@ -81,11 +84,17 @@ export default function CadastroEC2() {
 
                     </div>
 
+                    <label htmlFor="text"></label>
+                    <input type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
+                    <div>
+                        <button type='submit' onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} >Cadastrar</button>
+                    </div>
+                </form>
 
-
-                </div>
 
             </div>
+
+        </div>
 
         </div >
 
