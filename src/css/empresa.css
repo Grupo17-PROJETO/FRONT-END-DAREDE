@@ -29,10 +29,11 @@
 
 .logo{
 
-    width: 125px;
+    width: 117px;
     height: 34px;
     margin-bottom: 24px;
     margin-left: 167px;
+    margin-top: 3px;
 
 }
 
@@ -51,6 +52,7 @@
     padding-right: 25px;
     font-size: 12px;
     margin-top: 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
@@ -116,13 +118,20 @@ margin-right: 20px;
  .cima{
 
 
-    margin-top: 35px;
+    margin-top: 36px;
     margin-bottom: 31px;
-    margin-left: 89px;
+    margin-left: 65px;
     font-family: 'Montserrat Alternates', sans-serif;
+    padding-bottom: 11px;
 
 
   }
+
+.font{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
 
 
  .divisaoPrinc{

@@ -237,6 +237,24 @@ margin-right: 20px;
 
 }
 
+.botao_vpc_ec2{
+
+
+    width: 101px;
+    height: 27px;
+    margin-left: 190px;
+    margin-top: 19px;
+
+
+}
+
+.Coluna_Linhas{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .divdiv{
 
@@ -359,6 +377,7 @@ margin-right: 20px;
     border-radius: 5px;
     border: 0px solid;
     margin-top: 32px;
+    cursor: pointer;
 
 
 }

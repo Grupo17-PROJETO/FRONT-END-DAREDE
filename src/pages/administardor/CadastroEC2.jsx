@@ -38,10 +38,10 @@ export default function CadastroEC2() {
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
-                        <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
+                    <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuarios</a>
-                        <a href="/EC2">Cadastro EC2</a>
+                        <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
@@ -54,29 +54,33 @@ export default function CadastroEC2() {
 
                 </div>
                 <div className='Coluna_Linhas'>
-                    <h1 className='cima'>Cadatro de EC2</h1>
-                    <form action='#'>
+                    <div>
+                        <h1 className='cima'>Cadatro de EC2/VPC</h1>
+                        <form action='#'>
 
-                        <p>AMI:</p>
-                        <label htmlFor="email"></label>
-                        <input type="text" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
-
-
-                        <p>TYPE:</p>
-                        <label htmlFor="address"></label>
-                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
+                            <p className='font'>Ami:</p>
+                            <label htmlFor="email"></label>
+                            <input type="text" placeholder='ex:' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
 
 
-                        <p>TAG:</p>
-                        <label htmlFor="password"></label>
-                        <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
+                            <p className='font'>Tipo:</p>
+                            <label htmlFor="address"></label>
+                            <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
 
-                        <div>
-                        </div>
 
-                        <label htmlFor="text"></label>
-                        <input type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
-                    </form>
+                            <p className='font'>Empresa:</p>
+                            <label htmlFor="password"></label>
+                            <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
+
+                            <div>
+                            </div>
+
+                            <label htmlFor="text"></label>
+                            <input className='botao_vpc_ec2' type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
+                        </form>
+
+                    </div>
+
 
 
                 </div>

@@ -39,10 +39,10 @@ function ListaCadastroClientes() {
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
-                        <a href="https://emersondiasdealmeida.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=1652812875767&to=1652899275767">Monitoramento EC2</a>
+                        <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuario</a>
-                        <a href="/EC2">Cadastro EC2</a>
+                        <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
@@ -96,10 +96,10 @@ function ListaCadastroClientes() {
                                                                         <li className='resut_nome'>{res}</li>
 
                                                                     </div>
-                                                                    
+
                                                                 </div>
 
-                                                                
+
                                                                 {/* <li>Email: {res1}</li>
                                                                 <li>Celuar: {res2}</li>  */}
                                                             </ul>
