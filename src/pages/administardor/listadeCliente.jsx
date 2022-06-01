@@ -2,11 +2,11 @@ import '../../css/empresa.css'
 import Logo from '../../img/imgLogin/darede.png'
 import boneco from "../../img/imgCliente/boneco_listagem.png"
 import sair from '../../img/imgCliente/sair.png'
-import chatboot from '../../img/imgCliente/icone_chat.png'
-import Sair from '../../img/imgCliente/sair.png'
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import empresa from '../../img/imgCliente/gif_empresa.gif'
+import usuario from '../../img/imgCliente/img_usuario.png'
 
 
 function ListaCadastroClientes() {
@@ -32,6 +32,7 @@ function ListaCadastroClientes() {
             .catch(error => console.error(`Erro: ${error}`));
     }
 
+
     return (
         <div>
             <header>
@@ -48,76 +49,72 @@ function ListaCadastroClientes() {
             </header>
             <div className='divisaoPrinc2'>
 
-                <div className='boneco'>
-                    <img src={boneco} alt="" />
-                </div>
-                <div className='blocoCentralPrincipal_Lista_CLientes'>
-                    <div>
-                        <div className='divisao_listagem_cliente'>
-                            <h1 className='lista_do_map'>Lista de Usuarios</h1>
-                        </div>
-                        <div >
-                            <form action='#'>
-                                <label htmlFor="text"></label>
-                                <div>
-                                    <input className='input_busca' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
-
-                                </div>
-
-                                <div>
-                                     <input className='botaozinho' type="button" onClick={listagemUsuarios} />
-                                </div>
-
-                                
-                            </form>
-                            {
-                                users.map((res) => {
-                                    return (
-                                        <div className='blocoCentral_Lista_Clientes'>
-                                            <div key={res}>
-                                                <div className="informacoes">
-                                                    <section className="separacao" >
-                                                        <ul>
-                                                            <li>Nome: {res} </li>
-                                                            {/* <li>Email: {res1}</li>
-                                                                <li>Celuar: {res2}</li>  */}
-                                                        </ul>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                            {/* {
-                                users.map((res, key) => {
-
-                                    console.log(res, key)
-                                    return (
-                                        <div className='blocoCentral_Lista_Clientes'>
-                                            <div>
-                                                <div className="informacoes">
-                                                    <section className="separacao" >
-                                                        <ul>
-                                                            <li>Nome: {res} </li>
-                                                            <li>Email: {key[1]}</li>
-                                                            <li>Celuar: {res2}</li> 
-                                                        </ul>
-                                                    </section>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    )
-                                })
-                            } */}
-
-                        </div>
-                    </div>
+                <div className='boneco_lista'>
+                    <img src={empresa} alt="" />
                 </div>
                 <div>
-                    <img className='chat' src={chatboot} alt="" />
+                    <div className='divisao_listagem_cliente'>
+                        <h1 className='lista_do_map'>Lista de Usuarios</h1>
+                    </div>
+                    <div className='blocoCentralPrincipal_Lista_CLientes'>
+
+                        <div>
+
+                            <div >
+                                <form action='#'>
+                                    <label htmlFor="text"></label>
+                                    <div className='divdiv'>
+
+                                        <div>
+                                            <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
+
+                                        </div>
+
+                                        <div>
+                                            <input className='botaozinho' type="button" onClick={listagemUsuarios} >
+                                            </input>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </form>
+                                {
+                                    users.map((res) => {
+                                        return (
+                                            <div className='blocoCentral_Lista_Clientes'>
+                                                <div key={res}>
+                                                    <div className="informacoes">
+                                                        <section className="separacao" >
+                                                            <ul>
+
+                                                                <div className='divisao_listagem_blocos'>
+                                                                    <img className='usus_blococs' src={usuario} alt="" />
+                                                                    <div className='divisao_nomes'>
+                                                                        <li className='nome'>Nome:</li>
+                                                                        <li className='resut_nome'>{res}</li>
+
+                                                                    </div>
+                                                                    
+                                                                </div>
+
+                                                                
+                                                                {/* <li>Email: {res1}</li>
+                                                                <li>Celuar: {res2}</li>  */}
+                                                            </ul>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
