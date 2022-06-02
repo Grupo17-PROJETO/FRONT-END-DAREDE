@@ -5,6 +5,8 @@ import sair from '../../img/imgCliente/sair.png'
 import ganhos from '../../img/imgCliente/ganhos.png'
 import UserPool from '../../components/UserPool'
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
@@ -22,19 +24,10 @@ export default function CadastroEC2() {
             .then((res) => {
                 console.log(`Instancia criada`, res.data)
                 console.log(res)
+                
             })
-            .catch(error => console.error(`Erro: ${error}`));
+            .catch(error => console.error(`Erro: ${error}`));;
     }
-
-    const onSubmit = () => {
-        axios.post(url, { Ami: AMI, Instance: TYPE, Tag: TAG })
-        .then((res) => {
-            console.log(`Instancia criada`, res.data)
-            console.log(res)
-        })
-        .catch(error => console.error(`Erro: ${error}`));
-    };
-
 
     return (
         <div>
@@ -91,7 +84,7 @@ export default function CadastroEC2() {
                             <button type='submit' onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} >Cadastrar</button>
                         </div> */}
                 </div>
-
+                <ToastContainer />
             </div>
 
         </div>

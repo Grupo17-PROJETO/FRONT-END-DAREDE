@@ -34,7 +34,7 @@ export default function Signup() {
 
             ],
             null, (err, data) => {
-                if (err) { console.log(err);toast.error("Ta errado") } else{
+                if (err) { console.log(err);toast.error("Preencha os Requisitos Corretamente") } else{
 
                     console.log(data.user)
                     toast.success("Cadastrado com Sucesso!!")

@@ -7,6 +7,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import empresa from '../../img/imgCliente/gif_empresa.gif'
 import usuario from '../../img/imgCliente/img_usuario.png'
+import lupa from '../../img/imgCliente/lupa.png'
+
 
 
 function ListaCadastroClientes() {
@@ -66,13 +68,17 @@ function ListaCadastroClientes() {
                                     <div className='divdiv'>
 
                                         <div>
-                                            <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
+                                            <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}>
+                                    
+                                            </input>
 
                                         </div>
 
                                         <div>
-                                            <input className='botaozinho' type="button" onClick={listagemUsuarios} >
-                                            </input>
+                                            <button className='botaozinho' type="button" onClick={listagemUsuarios}>
+                                                <img className='lupa' src={lupa} alt="" />
+                                            </button>
+        
                                         </div>
 
 
