@@ -21,11 +21,13 @@ export default function MeusEquipamentos() {
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
 
-    const [inst, setInst] = useState(['']);
+    const [inst, setInst] = useState('');
+    const [inst1, setInst1] = useState('');
+    const [inst2, setInst2] = useState('');
     const [ec2, getEc2] = useState([]);
-    const [regiao, setRegiao] = useState('');
     const urlget = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2'
     const urloff = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/desligar'
+    const urlon = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/ligar'
 
     useEffect(() => {
         listarEc2();
@@ -33,8 +35,7 @@ export default function MeusEquipamentos() {
 
     const listarEc2 = () => {
         const options = {
-            method: 'GET',
-            headers: { 'regiao': regiao }
+            headers: { 'nome': inst1 }
         }
         console.log(options);
         axios.get(urlget, options)
@@ -47,12 +48,15 @@ export default function MeusEquipamentos() {
     }
 
     const pararEc2 = () => {
-        const options = {
-            method: 'POST',
-            headers: { 'regiao': 'us-east-1', "'nomeinst'": ['i-07e4204ff2085ee76']}
-        }
-        console.log(options);
-        axios.post(urloff, options)
+        axios.post(urloff, { 'tag': inst })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch(error => console.error(`Erro: ${error}`));
+    }
+
+    const ligarEc2 = () => {
+        axios.post(urlon, { 'tag': inst2 })
             .then((res) => {
                 console.log(res);
             })
@@ -83,15 +87,21 @@ export default function MeusEquipamentos() {
 
                     <form action='#'>
                         <label htmlFor="text"></label>
-                        <input type="text" name='texto' value={inst} onChange={(event) => setInst(event.target.value)}></input>
+                        <input type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
                         <input type="button" onClick={pararEc2} />
                     </form>
 
-                    {/* <form action='#'>
+                    <form action='#'>
                         <label htmlFor="text"></label>
-                        <input type="text" name='texto' value={regiao} onChange={(event) => setRegiao(event.target.value)}></input>
+                        <input type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
                         <input type="button" onClick={listarEc2} />
-                    </form> */}
+                    </form>
+
+                    <form action='#'>
+                        <label htmlFor="text"></label>
+                        <input type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+                        <input type="button" onClick={ligarEc2} />
+                    </form>
                     {
                         ec2.map((res) => {
                             return (
@@ -100,9 +110,9 @@ export default function MeusEquipamentos() {
                                         <div className="informacoes">
                                             <section className="separacao" >
                                                 <ul>
-                                                    <li>Estado: {res[0]}</li>
-                                                    <li>Estado2: {res[1]}</li>
-                                                    <li>Estado3: {res[2]}</li>
+                                                    <li>Estado: {res}</li>
+                                                    {/* <li>Estado2: {res}</li>
+                                                    <li>Estado3: {res}</li> */}
                                                 </ul>
                                             </section>
                                         </div>

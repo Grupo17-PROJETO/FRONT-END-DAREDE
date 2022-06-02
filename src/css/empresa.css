@@ -29,10 +29,11 @@
 
 .logo{
 
-    width: 125px;
+    width: 117px;
     height: 34px;
     margin-bottom: 24px;
     margin-left: 167px;
+    margin-top: 3px;
 
 }
 
@@ -51,6 +52,7 @@
     padding-right: 25px;
     font-size: 12px;
     margin-top: 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
@@ -86,8 +88,9 @@ margin-right: 20px;
 
  .input_busca{
 
-    width: 301px;
+    width: 291px;
     height: 25px;
+    margin-bottom: 23px;
 
  }
 
@@ -115,13 +118,20 @@ margin-right: 20px;
  .cima{
 
 
-    margin-top: 35px;
+    margin-top: 36px;
     margin-bottom: 31px;
-    margin-left: 89px;
+    margin-left: 65px;
     font-family: 'Montserrat Alternates', sans-serif;
+    padding-bottom: 11px;
 
 
   }
+
+.font{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
 
 
  .divisaoPrinc{
@@ -224,6 +234,15 @@ margin-right: 20px;
 
 }
 
+.boneco_lista img{
+
+    justify-content: flex-start;
+    width: 900px;
+    margin: 7px;
+    
+
+}
+
 .boneco2 img{
 
     justify-content: flex-start;
@@ -241,10 +260,25 @@ margin-right: 20px;
 .blocoCentralPrincipal_Lista_CLientes{
 
     margin: 53px 86px;
-    height: 550px;
-    padding-right: 44px;
+    height: 489px;
+    padding-right: 15px;
     overflow: overlay;
 
+}
+
+.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+
+.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar-track {
+  background: #F1F1F1;        /* color of the tracking area */
+  border-radius: 20px;
+}
+
+.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar-thumb {
+  background-color: green;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid black;  /* creates padding around scroll thumb */
 }
 
 /* --------------- Centro ------------------ */
@@ -365,25 +399,37 @@ margin-right: 20px;
 
     height: 150px;
     width: 342px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     margin-bottom: 15px;
-    border-radius: 10px;
     display: flex;
 
 }
 
 .botaozinho{
 
-    width: 20px;
+    width: 50px;
+    height: 25px;
+    margin-right: 27px;
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid green;
+
 
 }
 
 .lista_do_map{
 
-    margin-bottom: 26px;
-    margin-left: 166px;
+    margin-bottom: 43px;
     font-family: 'Montserrat Alternates', sans-serif;
+    margin-left: 118px;
+    margin-top: 47px;
 
+
+}
+
+.divisao_listagem_blocos{
+
+    display: flex;
 
 }
 
@@ -416,7 +462,7 @@ margin-right: 20px;
 
 .informacoes{
 
-    padding-left: 50px;
+
     margin-top: 15px;
     
 
@@ -428,10 +474,37 @@ margin-right: 20px;
 
 }
 
+.usus_blococs{
+
+    width: 93px;
+    margin-top: 13px;
+    margin-left: 54px;
+}
+
+.nome{
+
+    list-style: none;
+
+}
+
+.resut_nome{
+
+    list-style: none;
+
+}
+
+
 .informacoes p{
 
     margin-bottom: 5px;
     
+
+}
+
+.divisao_nomes{
+
+    margin-left: 44px;
+    margin-top: 30px;
 
 }
 
