@@ -6,7 +6,7 @@ import ganhos from '../../img/imgCliente/ganhos.png'
 import UserPool from '../../components/UserPool'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import axios from 'axios';
 
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
@@ -19,6 +19,7 @@ export default function Signup() {
     const [endereco, setEndereco] = useState("");
     const [grupo, setGrupo] = useState("");
 
+    const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes/adicionargrupo';
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -39,11 +40,15 @@ export default function Signup() {
                     toast.success("Cadastrado com Sucesso!!")
                 }
             });
+        axios.post(url, { email: email, grupo: grupo })
+            .then((res) => {
+                console.log(res.data)
+            })
+            .catch(error => console.error(`Erro: ${error}`));
     };
 
+
     return (
-
-
         <div>
             <header>
                 <div className='corFundoH'>
@@ -108,6 +113,12 @@ export default function Signup() {
                                 <p className='paragro__'>Criar Senha:</p>
                                 <label htmlFor="password"></label>
                                 <input type="password" className='solitarioss' name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
+                            </div>
+
+                            <div>
+                                <p className='paragro__'>Funcionário:</p>
+                                <label htmlFor="text"></label>
+                                <input type="text" name='Grupo' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
                             </div>
 
                             <div>
