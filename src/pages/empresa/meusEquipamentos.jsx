@@ -71,7 +71,6 @@ export default function MeusEquipamentos() {
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
                         <a href="/ListagemEquipamentos">Listar Equipamentos</a>
-                        <a href="">Contato</a>
                         <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
                     </div>
                 </div>
@@ -121,7 +120,7 @@ export default function MeusEquipamentos() {
                             )
                         })
                     }
-                    <div>
+                    {/* <div>
                         <div className='divisao_meus'>
                             <img src={prancheta} alt="" />
                             <h1>MEUS EQUIPAMENTOS</h1>
@@ -164,12 +163,10 @@ export default function MeusEquipamentos() {
 
                         </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
-                <div>
-                    {/* <img className='chat' src={chatboot} alt="" /> */}
-                </div>
+
 
             </div>
 

@@ -244,9 +244,21 @@ margin-right: 20px;
     height: 27px;
     margin-left: 190px;
     margin-top: 19px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
 
 
 }
+
+.solitariosss {
+    width: 500px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 34px;
+}
+
 
 .Coluna_Linhas{
 

@@ -58,7 +58,7 @@ export default function Signup() {
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuarios</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
-                        <a href="/" ><img className='sair' src={sair} alt="" /></a>
+                        <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
                 </div>
             </header>
@@ -115,11 +115,11 @@ export default function Signup() {
                                 <input type="password" className='solitarioss' name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
                             </div>
 
-                            <div>
+                            {/* <div>
                                 <p className='paragro__'>Funcionário:</p>
                                 <label htmlFor="text"></label>
-                                <input type="text" name='Grupo' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
-                            </div>
+                                <input className='solitarioss' type="text" name='Grupo' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
+                            </div> */}
 
                             <div>
                                 <button type='submit' className='cadastrarbtn'>Cadastrar</button>

@@ -37,8 +37,7 @@ function App() {
                     <img className='logo' src={Logo} alt="" />
                     
                     <div className='nave'>
-                        <a href="/ListagemEquipamentos">Listar Equipamentos</a>
-                        <a href="">Contato</a>
+                        <a href="/MeusEquipamentos">Meus Equipamentos</a>
                         <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
 
                     </div>

@@ -26,6 +26,16 @@ export default function CadastroEC2() {
             .catch(error => console.error(`Erro: ${error}`));
     }
 
+    const onSubmit = () => {
+        axios.post(url, { Ami: AMI, Instance: TYPE, Tag: TAG })
+        .then((res) => {
+            console.log(`Instancia criada`, res.data)
+            console.log(res)
+        })
+        .catch(error => console.error(`Erro: ${error}`));
+    };
+
+
     return (
         <div>
             <header>
@@ -50,27 +60,28 @@ export default function CadastroEC2() {
                 <div className='Coluna_Linhas'>
                     <div>
                         <h1 className='cima'>Cadastro de EC2/VPC</h1>
-                        <form action='#'>
+                        <form action='#' >
 
                             <p className='font'>Ami:</p>
                             <label htmlFor="email"></label>
-                            <input type="text" placeholder='ex:' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
+                            <input type="text" placeholder='ex:ami-0f9fc25dd2506cf6d' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
 
 
                             <p className='font'>Tipo:</p>
                             <label htmlFor="address"></label>
-                            <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
+                            <input className='solitarioss' placeholder='ex: t2.micro' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
 
 
                             <p className='font'>Empresa:</p>
                             <label htmlFor="password"></label>
-                            <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
+                            <input type="text" className='solitariosss' placeholder='ex: Nome do Cliente' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
 
                             <div>
                             </div>
 
                             <label htmlFor="text"></label>
-                            <input className='botao_vpc_ec2' type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input>
+                            <button className='botao_vpc_ec2' type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)}>Cadastrar</button>
+                            {/* <input className='botao_vpc_ec2' type="button" onClick={criacaoec2} value={ec2} onChange={(event) => setEc2(event.target.value)} ></input> */}
                         </form>
 
                     </div>
