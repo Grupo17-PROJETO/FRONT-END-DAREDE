@@ -21,7 +21,7 @@ export default function MeusEquipamentos() {
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
 
-    const [inst, setInst] = useState();    
+    const [inst, setInst] = useState(['']);
     const [ec2, getEc2] = useState([]);
     const [regiao, setRegiao] = useState('');
     const urlget = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2'
@@ -49,7 +49,7 @@ export default function MeusEquipamentos() {
     const pararEc2 = () => {
         const options = {
             method: 'POST',
-            headers: { 'regiao': 'us-east-1', nomeinst: `"${inst}"` }
+            headers: { 'regiao': 'us-east-1', "'nomeinst'": ['i-07e4204ff2085ee76']}
         }
         console.log(options);
         axios.post(urloff, options)

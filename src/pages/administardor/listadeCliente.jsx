@@ -13,7 +13,9 @@ function ListaCadastroClientes() {
     const [users, getUsers] = useState([]);
     const [grupo, setGrupo] = useState('');
     const [email, getEmail] = useState([]);
+
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes/grupos'
+    
     useEffect(() => {
         listagemUsuarios();
     }, []);
@@ -23,6 +25,7 @@ function ListaCadastroClientes() {
             method: 'GET',
             headers: { 'grupo': grupo }
         }
+        console.log(options);
         axios.get(url, options)
             .then((res) => {
                 const users = res.data.data.usuarios;

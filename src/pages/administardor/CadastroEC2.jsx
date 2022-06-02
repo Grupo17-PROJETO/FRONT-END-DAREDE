@@ -10,20 +10,19 @@ import axios from "axios";
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
 export default function CadastroEC2() {
-    const [AMI, setAMI] = useState("");
-    const [TYPE, setTYPE] = useState("");
-    const [KEY, setKEY] = useState("");
-    const [TAG, setTAG] = useState("");
-
-
+    const [ami, setAmi] = useState('');
+    const [type, setType] = useState('');
+    const [tag, setTag] = useState('');
     const [ec2, setEc2] = useState('');
+
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/criar'
 
     const criacaoec2 = () => {
         const options = {
             method: 'POST',
-            headers: { 'AMI': AMI, 'Instance': TYPE, 'TAG': TAG }
+            headers: { 'Ami': ami, 'Instance': type, 'Tag': tag }
         }
+        console.log(options);
         axios.post(url, options)
             .then((res) => {
                 console.log(`Instancia criada ${res.data}`)
@@ -59,17 +58,17 @@ export default function CadastroEC2() {
 
                         <p>AMI:</p>
                         <label htmlFor="email"></label>
-                        <input type="text" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={AMI} onChange={(event) => setAMI(event.target.value)}></input>
+                        <input type="text" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={ami} onChange={(event) => setAmi(event.target.value)}></input>
 
 
                         <p>TYPE:</p>
                         <label htmlFor="address"></label>
-                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={TYPE} onChange={(event) => setTYPE(event.target.value)}></input>
+                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={type} onChange={(event) => setType(event.target.value)}></input>
 
 
                         <p>TAG:</p>
                         <label htmlFor="password"></label>
-                        <input type="text" className='solitarioss' name='Senha' value={TAG} onChange={(event) => setTAG(event.target.value)}></input>
+                        <input type="text" className='solitarioss' name='Senha' value={tag} onChange={(event) => setTag(event.target.value)}></input>
 
                         <div>
                         </div>
