@@ -27,6 +27,14 @@
 
 }
 
+
+.lista_do_map2 {
+    margin-bottom: 43px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-left: 115px;
+    margin-top: 95px;
+}
+
 .logo{
 
     width: 117px;
@@ -246,7 +254,7 @@ margin-right: 20px;
 .boneco_lista2 img{
 
     justify-content: flex-start;
-    width: 978px;
+    width: 998px;
     margin: 7px;
     
 
@@ -412,11 +420,17 @@ margin-right: 20px;
 .blocoCentral_Lista_Clientes{
 
     height: 150px;
-    width: 342px;
+    width: 202px;
     border: 1px solid #000000;
-    margin-bottom: 15px;
+    margin-top: 15px;
     display: flex;
 
+}
+
+.input_busca2 {
+    width: 291px;
+    height: 25px;
+    
 }
 
 .botaozinho{

@@ -42,12 +42,6 @@ const Modal_EC2 = ({ onClose = () => { } }) => {
                     </div>
 
 
-                    <div className="btnss">
-
-                        <button onClick={onClose} >Solicitar Orçamento</button>
-
-                    </div>
-
                 </div>
 
             </div>

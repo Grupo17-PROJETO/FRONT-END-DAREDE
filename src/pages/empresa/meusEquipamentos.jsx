@@ -8,6 +8,7 @@ import sair from '../../img/imgCliente/sair.png'
 import novo from '../../img/imgCliente/b_novo.png'
 import chatboot from '../../img/imgCliente/icone_chat.png'
 import axios from 'axios';
+import empresa2 from '../../img/imgCliente/gif_empresa2.gif'
 
 
 export default function MeusEquipamentos() {
@@ -29,9 +30,9 @@ export default function MeusEquipamentos() {
     const urloff = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/desligar'
     const urlon = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/ec2/ligar'
 
-    useEffect(() => {
-        listarEc2();
-    }, []);
+    // useEffect(() => {
+    //     listarEc2();
+    // }, []);
 
     const listarEc2 = () => {
         const options = {
@@ -63,113 +64,86 @@ export default function MeusEquipamentos() {
             .catch(error => console.error(`Erro: ${error}`));
     }
 
+
     return (
         <div>
             <header>
-
                 <div className='corFundoH'>
+
                     <img className='logo' src={Logo} alt="" />
+
                     <div className='nave'>
-                        <a href="/ListagemEquipamentos">Listar Equipamentos</a>
+                        <a href="/ListagemEquipamentos">Equipamentos</a>
                         <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
                     </div>
+
+
                 </div>
 
             </header>
-            <div className='divisaoPrinc'>
+            <div className='divisaoPrinc2'>
 
-                <div className='boneco2'>
-                    <img src={novo} alt="" />
+                <div className='boneco_lista2'>
+                    <img src={empresa2} alt="" />
                 </div>
+                <div>
+                    <div className='divisao_listagem_cliente'>
+                        <h1 className='lista_do_map2'>Acompanhamento</h1>
+                    </div>
+                    <div className='blocoCentralPrincipal_Lista_CLientes'>
 
-                <div className='blocoCentralPrincipal'>
+                        <div>
 
-                    <form action='#'>
-                        <label htmlFor="text"></label>
-                        <input type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
-                        <input type="button" onClick={pararEc2} />
-                    </form>
+                            <div >
 
-                    <form action='#'>
-                        <label htmlFor="text"></label>
-                        <input type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
-                        <input type="button" onClick={listarEc2} />
-                    </form>
+                                <form action='#'>
+                                    <label htmlFor="text"></label>
+                                    <p>Pausar</p>
+                                    <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
+                                    <input className='botaozinho' type="button" onClick={pararEc2} />
+                                </form>
 
-                    <form action='#'>
-                        <label htmlFor="text"></label>
-                        <input type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
-                        <input type="button" onClick={ligarEc2} />
-                    </form>
-                    {
-                        ec2.map((res) => {
-                            return (
-                                <div className='blocoCentral_Lista_Clientes'>
-                                    <div key={res}>
-                                        <div className="informacoes">
-                                            <section className="separacao" >
-                                                <ul>
-                                                    <li>Estado: {res}</li>
-                                                    {/* <li>Estado2: {res}</li>
-                                                    <li>Estado3: {res}</li> */}
-                                                </ul>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                    {/* <div>
-                        <div className='divisao_meus'>
-                            <img src={prancheta} alt="" />
-                            <h1>MEUS EQUIPAMENTOS</h1>
+
+                                <form action='#'>
+                                    <label htmlFor="text"></label>
+                                    <p>Ligar</p>
+                                    <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+                                    <input className='botaozinho' type="button" onClick={ligarEc2} />
+                                </form>
+
+                                <form action='#'>
+                                    <label htmlFor="text"></label>
+                                    <p>Listar</p>
+                                    <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
+                                    <input className='botaozinho' type="button" onClick={listarEc2} />
+                                </form>
+
+                                {
+                                    ec2.map((res) => {
+                                        return (
+                                            <div className='blocoCentral_Lista_Clientes'>
+                                                <div key={res}>
+                                                    <div className="informacoes">
+                                                        <section className="separacao" >
+                                                            <ul>
+                                                                <li>Estado: {res}</li>
+                                                                {/* <li>Estado2: {res}</li>
+                                                                <li>Estado3: {res}</li> */}
+                                                            </ul>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-
-                        <div className='blocoCentral_Meus_equipamentos'>
-
-                            <section >
-                                <img className='blcimg' src={VPC} alt="" />
-
-                            </section>
-
-                            <section className='informacoes'>
-                                <h2>VPC</h2>
-                                <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
-                                <center>
-                                    <button className='botaoEC2'>
-                                        <p>Detalhes do Uso</p>
-                                    </button>
-
-                                </center>
-                            </section>
-
-                        </div>
-
-                        <div className='blocoCentral_Meus_equipamentos'>
-                            <section >
-                                <img className='blcimg' src={EC2} alt="" />
-                            </section>
-
-                            <section className='informacoes'>
-                                <h2>EC2</h2>
-                                <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
-                                <center>
-                                    <button className='botaoEC2'>
-                                        <p>Detalhes do Uso</p>
-                                    </button>
-                                </center>
-                            </section>
-
-                        </div>
-
-                    </div> */}
+                    </div>
 
                 </div>
-
 
             </div>
-
         </div>
-    )
+    );
 }

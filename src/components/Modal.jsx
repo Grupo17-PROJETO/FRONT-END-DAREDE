@@ -39,21 +39,6 @@ const Modal_VPC = ({ onClose = () => { } }) => {
 
                         </p>
                     </div>
-
-
-                    <div className="btns">
-
-                        <button onClick={onClose}>Solicitar Orçamento</button>
-
-
-                    </div>
-
-
-
-
-
-
-
                 </div>
                 <ToastContainer />
 

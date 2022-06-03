@@ -77,7 +77,7 @@ export default function Login() {
             <div className='estilizacaoI'>
 
               <form onSubmit={efetuarLogin}>
-                <p className='email_senha'>EMAIL / USUARIO</p>
+                <p className='email_senha'>EMAIL</p>
                 <input type="name" id="name" value={(name)} onChange={(e) => setName(e.target.value)}></input>
 
                 <p className='email_senha'>SENHA</p>
