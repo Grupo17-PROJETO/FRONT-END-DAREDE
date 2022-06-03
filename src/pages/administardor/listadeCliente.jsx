@@ -68,9 +68,7 @@ function ListaCadastroClientes() {
                                     <div className='divdiv'>
 
                                         <div>
-                                            <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}>
-                                    
-                                            </input>
+                                            <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
 
                                         </div>
 
