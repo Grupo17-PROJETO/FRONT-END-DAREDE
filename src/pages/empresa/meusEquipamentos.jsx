@@ -1,14 +1,11 @@
 import '../../css/empresa.css'
 import { Component, useEffect, useState } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
-import VPC from '../../img/imgCliente/VPC.png'
-import EC2 from '../../img/imgCliente/EC2.png'
-import prancheta from '../../img/imgCliente/prancheta.png'
 import sair from '../../img/imgCliente/sair.png'
-import novo from '../../img/imgCliente/b_novo.png'
-import chatboot from '../../img/imgCliente/icone_chat.png'
 import axios from 'axios';
 import empresa2 from '../../img/imgCliente/gif_empresa2.gif'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function MeusEquipamentos() {
@@ -43,7 +40,7 @@ export default function MeusEquipamentos() {
             .then((res) => {
                 console.log(res);
                 const ec2 = res.data.data.status;
-                getEc2(ec2);
+                getEc2(ec2); 
             })
             .catch(error => console.error(`Erro: ${error}`));
     }
@@ -86,7 +83,7 @@ export default function MeusEquipamentos() {
                 <div className='boneco_lista2'>
                     <img src={empresa2} alt="" />
                 </div>
-                <div>
+                <div className='centro_2'>
                     <div className='divisao_listagem_cliente'>
                         <h1 className='lista_do_map2'>Acompanhamento</h1>
                     </div>
@@ -98,24 +95,58 @@ export default function MeusEquipamentos() {
 
                                 <form action='#'>
                                     <label htmlFor="text"></label>
-                                    <p>Pausar</p>
-                                    <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
-                                    <input className='botaozinho' type="button" onClick={pararEc2} />
+                                    <p className='font'>Pausar</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+                                            <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
+                                        </div>
+                                        <div>
+                                            <button className='botaozinho1'onClick={pararEc2}></button>
+                                        </div>
+
+                                    </div>
+
+
                                 </form>
 
 
                                 <form action='#'>
                                     <label htmlFor="text"></label>
-                                    <p>Ligar</p>
-                                    <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
-                                    <input className='botaozinho' type="button" onClick={ligarEc2} />
+                                    <p className='font'>Ligar</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+
+                                            <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+
+                                        </div>
+
+                                        <div>
+                                            <button className='botaozinho2'onClick={ligarEc2}></button>
+                                        </div>
+
+                                    </div>
+
+
+
                                 </form>
 
                                 <form action='#'>
                                     <label htmlFor="text"></label>
-                                    <p>Listar</p>
-                                    <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
-                                    <input className='botaozinho' type="button" onClick={listarEc2} />
+                                    <p className='font'>Estado</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+                                            <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
+                                        </div>
+                                        <div>
+                                            <input className='botaozinho3' type="button" onClick={listarEc2} />
+                                        </div>
+
+                                    </div>
+
+
                                 </form>
 
                                 {
@@ -126,7 +157,7 @@ export default function MeusEquipamentos() {
                                                     <div className="informacoes">
                                                         <section className="separacao" >
                                                             <ul>
-                                                                <li>Estado: {res}</li>
+                                                                <li className='font'>Estado: {res}</li>
                                                                 {/* <li>Estado2: {res}</li>
                                                                 <li>Estado3: {res}</li> */}
                                                             </ul>
@@ -139,6 +170,7 @@ export default function MeusEquipamentos() {
                                 }
                             </div>
                         </div>
+                        <ToastContainer />
                     </div>
 
                 </div>

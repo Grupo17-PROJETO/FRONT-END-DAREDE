@@ -38,6 +38,7 @@ export default function CadastroEC2() {
                         <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuarios</a>
+                        <a href="/acompanhamento">Acompanhamento</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>

@@ -44,6 +44,7 @@ function ListaCadastroClientes() {
                         <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuario</a>
+                        <a href="/acompanhamento">Acompanhamento</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
@@ -58,7 +59,7 @@ function ListaCadastroClientes() {
                     <div className='divisao_listagem_cliente'>
                         <h1 className='lista_do_map'>Lista de Usuarios</h1>
                     </div>
-                    <div className='blocoCentralPrincipal_Lista_CLientes'>
+                    <div className='blocoCentralPrincipal_Lista_CLientes2'>
 
                         <div>
 
@@ -67,9 +68,16 @@ function ListaCadastroClientes() {
                                     <label htmlFor="text"></label>
                                     <div className='divdiv'>
 
-                                        <div>
+                                        {/* <div>
                                             <input className='input_busca' placeholder='ex: Clientes ou Funcionarios' type="text" name='texto' value={grupo} onChange={(event) => setGrupo(event.target.value)}></input>
 
+                                        </div> */}
+                                        <div>
+                                            <select className='input_busca' value={grupo} onChange={(event) => setGrupo(event.target.value)}>
+                                                <option>Escolha Uma Opção</option>
+                                                <option>Clientes</option>
+                                                <option>Funcionarios</option>
+                                            </select>
                                         </div>
 
                                         <div>
@@ -87,7 +95,7 @@ function ListaCadastroClientes() {
                                 {
                                     users.map((res) => {
                                         return (
-                                            <div className='blocoCentral_Lista_Clientes'>
+                                            <div className='blocoCentral_Lista_Clientes2'>
                                                 <div key={res}>
                                                     <div className="informacoes">
                                                         <section className="separacao" >
@@ -96,7 +104,7 @@ function ListaCadastroClientes() {
                                                                 <div className='divisao_listagem_blocos'>
                                                                     <img className='usus_blococs' src={usuario} alt="" />
                                                                     <div className='divisao_nomes'>
-                                                                        <li className='nome'>Nome:</li>
+                                                                        
                                                                         <li className='resut_nome'>{res}</li>
 
                                                                     </div>

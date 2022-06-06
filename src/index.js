@@ -34,7 +34,7 @@ const Routing = (
         <Route path="/ListaClientes" element={<ListaClientes/>}/>
         <Route path="/cadastroCliente" element={<CadastroCliente/>}/>
         <Route path="/EC2" element={<EC2/>}></Route>
-        <Route path="/VPC" element={<VPC/>}></Route>
+        <Route path="/acompanhamento" element={<VPC/>}></Route>
 
       
 

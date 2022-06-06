@@ -1,15 +1,14 @@
 import '../../css/empresa.css'
+import { Component, useEffect, useState } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
-import boneco from "../../img/imgCliente/boneco_listagem.png"
 import sair from '../../img/imgCliente/sair.png'
-import 'react-toastify/dist/ReactToastify.css';
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from 'axios';
 import empresa2 from '../../img/imgCliente/gif_empresa2.gif'
-import usuario from '../../img/imgCliente/img_usuario.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-function ListaCadastroClientes() {
+export default function MeusEquipamentos() {
 
     (function (d, m) {
         var kommunicateSettings =
@@ -41,7 +40,7 @@ function ListaCadastroClientes() {
             .then((res) => {
                 console.log(res);
                 const ec2 = res.data.data.status;
-                getEc2(ec2);
+                getEc2(ec2); 
             })
             .catch(error => console.error(`Erro: ${error}`));
     }
@@ -67,24 +66,30 @@ function ListaCadastroClientes() {
         <div>
             <header>
                 <div className='corFundoH'>
+
                     <img className='logo' src={Logo} alt="" />
+
                     <div className='nave'>
-                        <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
+                    <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
-                        <a href="/ListaClientes">Listagem Usuario</a>
+                        <a href="/ListaClientes">Listagem Usuarios</a>
+                        <a href="/acompanhamento">Acompanhamento</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>
+
+
                 </div>
+
             </header>
             <div className='divisaoPrinc2'>
 
                 <div className='boneco_lista2'>
                     <img src={empresa2} alt="" />
                 </div>
-                <div>
+                <div className='centro_2'>
                     <div className='divisao_listagem_cliente'>
-                        <h1 className='lista_do_map'>Acompanhamento</h1>
+                        <h1 className='lista_do_map2'>Acompanhamento</h1>
                     </div>
                     <div className='blocoCentralPrincipal_Lista_CLientes'>
 
@@ -94,21 +99,60 @@ function ListaCadastroClientes() {
 
                                 <form action='#'>
                                     <label htmlFor="text"></label>
-                                    <input type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
-                                    <input type="button" onClick={pararEc2} />
+                                    <p className='font'>Pausar</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+                                            <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
+                                        </div>
+                                        <div>
+                                            <button className='botaozinho1'onClick={pararEc2}></button>
+                                        </div>
+
+                                    </div>
+
+
+                                </form>
+
+
+                                <form action='#'>
+                                    <label htmlFor="text"></label>
+                                    <p className='font'>Ligar</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+
+                                            <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+
+                                        </div>
+
+                                        <div>
+                                            <button className='botaozinho2'onClick={ligarEc2}></button>
+                                        </div>
+
+                                    </div>
+
+
+
                                 </form>
 
                                 <form action='#'>
                                     <label htmlFor="text"></label>
-                                    <input type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
-                                    <input type="button" onClick={listarEc2} />
+                                    <p className='font'>Estado</p>
+                                    <div className='divsao_acompanhamento'>
+
+                                        <div>
+                                            <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
+                                        </div>
+                                        <div>
+                                            <input className='botaozinho3' type="button" onClick={listarEc2} />
+                                        </div>
+
+                                    </div>
+
+
                                 </form>
 
-                                <form action='#'>
-                                    <label htmlFor="text"></label>
-                                    <input type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
-                                    <input type="button" onClick={ligarEc2} />
-                                </form>
                                 {
                                     ec2.map((res) => {
                                         return (
@@ -117,7 +161,7 @@ function ListaCadastroClientes() {
                                                     <div className="informacoes">
                                                         <section className="separacao" >
                                                             <ul>
-                                                                <li>Estado: {res}</li>
+                                                                <li className='font'>Estado: {res}</li>
                                                                 {/* <li>Estado2: {res}</li>
                                                                 <li>Estado3: {res}</li> */}
                                                             </ul>
@@ -130,6 +174,7 @@ function ListaCadastroClientes() {
                                 }
                             </div>
                         </div>
+                        <ToastContainer />
                     </div>
 
                 </div>
@@ -138,5 +183,3 @@ function ListaCadastroClientes() {
         </div>
     );
 }
-
-export default ListaCadastroClientes;

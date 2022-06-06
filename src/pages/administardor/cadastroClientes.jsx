@@ -34,7 +34,7 @@ export default function Signup() {
 
             ],
             null, (err, data) => {
-                if (err) { console.log(err);toast.error("Preencha os Requisitos Corretamente") } else{
+                if (err) { console.log(err); toast.error("Preencha os Requisitos Corretamente") } else {
 
                     console.log(data.user)
                     toast.success("Cadastrado com Sucesso!!")
@@ -54,9 +54,10 @@ export default function Signup() {
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
-                    <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
+                        <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/ListaClientes">Listagem Usuarios</a>
+                        <a href="/acompanhamento">Acompanhamento</a>
                         <a href="/EC2">Cadastro EC2/VPC</a>
                         <a href="/login" ><img className='sair' src={sair} alt="" /></a>
                     </div>

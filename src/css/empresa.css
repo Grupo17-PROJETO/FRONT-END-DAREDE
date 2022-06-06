@@ -31,8 +31,15 @@
 .lista_do_map2 {
     margin-bottom: 43px;
     font-family: 'Montserrat Alternates', sans-serif;
-    margin-left: 115px;
+    margin-left: 97px;
     margin-top: 95px;
+}
+
+.blocoCentral_Lista_Clientes2 {
+    height: 143px;
+    width: 340px;
+    border: 1px solid #000000;
+    overflow: hidden;
 }
 
 .logo{
@@ -135,8 +142,39 @@ margin-right: 20px;
 
   }
 
+
+.botaozinho1 {
+    width: 50px;
+    height: 25px;
+    margin-right: 27px;
+    cursor: pointer;
+    background-color: red;
+    border: 1px solid green;
+    margin-bottom: 10px;
+}
+
+.botaozinho2 {
+    width: 50px;
+    height: 25px;
+    margin-right: 27px;
+    cursor: pointer;
+    background-color: green;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.botaozinho3 {
+    width: 50px;
+    height: 25px;
+    margin-right: 27px;
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid green;
+}
+
 .font{
 
+    list-style: none;
     font-family: 'Montserrat Alternates', sans-serif;
 
 }
@@ -231,6 +269,12 @@ margin-right: 20px;
 
 }
 
+.divsao_acompanhamento{
+
+    display: flex;
+
+}
+
 
 
 .boneco img{
@@ -254,7 +298,7 @@ margin-right: 20px;
 .boneco_lista2 img{
 
     justify-content: flex-start;
-    width: 998px;
+    width: 981px;
     margin: 7px;
     
 
@@ -282,22 +326,28 @@ margin-right: 20px;
 .blocoCentralPrincipal_Lista_CLientes{
 
     margin: 53px 86px;
+
+}
+
+.blocoCentralPrincipal_Lista_CLientes2{
+
+    margin: 53px 86px;
     height: 451px;
     padding-right: 15px;
     overflow: overlay;
 
 }
 
-.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar {
+.blocoCentralPrincipal_Lista_CLientes2::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
   }
 
-.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar-track {
+.blocoCentralPrincipal_Lista_CLientes2::-webkit-scrollbar-track {
   background: #F1F1F1;        /* color of the tracking area */
   border-radius: 20px;
 }
 
-.blocoCentralPrincipal_Lista_CLientes::-webkit-scrollbar-thumb {
+.blocoCentralPrincipal_Lista_CLientes2::-webkit-scrollbar-thumb {
   background-color: green;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 1px solid black;  /* creates padding around scroll thumb */
@@ -417,13 +467,22 @@ margin-right: 20px;
 
 }
 
+.centro_2{
+
+    margin-top: 60px;
+}
+
+
 .blocoCentral_Lista_Clientes{
 
-    height: 150px;
-    width: 202px;
+    height: 41px;
+    width: 340px;
     border: 1px solid #000000;
-    margin-top: 15px;
+    margin-top: 36px;
     display: flex;
+    /* padding-left: 102px; */
+
+    justify-content: center;
 
 }
 
@@ -512,12 +571,14 @@ margin-right: 20px;
 .nome{
 
     list-style: none;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
 .resut_nome{
 
     list-style: none;
+    font-family: 'Montserrat Alternates', sans-serif;
 
 }
 
@@ -531,8 +592,7 @@ margin-right: 20px;
 
 .divisao_nomes{
 
-    margin-left: 44px;
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 
