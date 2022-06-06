@@ -10,15 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function MeusEquipamentos() {
 
-    (function (d, m) {
-        var kommunicateSettings =
-            { "appId": "52bdeedeba6b4aa21e99cc515d0a0cc8", "popupWidget": true, "automaticChatOpenOnNavigation": true };
-        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-        window.kommunicate = m; m._globals = kommunicateSettings;
-    })(document, window.kommunicate || {});
-
     const [inst, setInst] = useState('');
     const [inst1, setInst1] = useState('');
     const [inst2, setInst2] = useState('');
@@ -106,7 +97,8 @@ export default function MeusEquipamentos() {
                                             <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
                                         </div>
                                         <div>
-                                            <button className='botaozinho1'onClick={pararEc2}></button>
+                                            <input type="button" className='botaozinho1'onClick={pararEc2} />
+                                            {/* <button className='botaozinho1'onClick={pararEc2}></button> */}
                                         </div>
 
                                     </div>
@@ -127,7 +119,8 @@ export default function MeusEquipamentos() {
                                         </div>
 
                                         <div>
-                                            <button className='botaozinho2'onClick={ligarEc2}></button>
+                                            <input type="button" className='botaozinho2'onClick={ligarEc2} />
+                                            {/* <button className='botaozinho2'onClick={ligarEc2}></button> */}
                                         </div>
 
                                     </div>
