@@ -5,7 +5,7 @@
 }
 
 .body_login_ferrari{
-    background-color: black;
+    background-color: white;
     background-image: url(../img/imgHome/fundo_ferrari.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,3 +200,13 @@
 }
 
 /* ::::::ROLAGEM DE IMAGEM = FIM:::::::: */
+
+@media screen and (max-width: 768px){
+
+    .body_login_ferrari{
+
+        display: none;
+
+    }
+
+}
