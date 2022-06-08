@@ -33,6 +33,7 @@ export default function CadastroEC2() {
         <div>
             <header>
                 <div className='corFundoH'>
+                        
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
                         <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>

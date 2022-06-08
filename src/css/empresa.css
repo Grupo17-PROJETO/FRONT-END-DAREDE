@@ -602,6 +602,14 @@ margin-right: 20px;
 
 }
 
+.logo_header {
+    width: 125px;
+    height: 34px;
+    margin-bottom: 24px;
+    margin-left: 167px;
+}
+
+
 .divisao_nomes{
 
     margin-top: 50px;
@@ -762,5 +770,52 @@ margin-right: 20px;
     margin-top: 7px;
 
 
+}
+
+@media screen and (max-width: 668px){
+
+    .logo_header {
+        width: 125px;
+        height: 34px;
+        margin-bottom: 24px;
+        margin-left: 5px;
+        margin-right: 90px;
+    }
+
+    .imagem_lado_d{
+
+        display: none;
+
+    }
+
+    .divisao {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+        margin-top: 69px;
+        padding-left: 82px;
+    }
+
+    .blocoCentral {
+        height: 154px;
+        width: 337px;
+        border: 1px solid #000000;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        display: flex;
+        margin-left: 130px;
+    }
+   
+
+    .botaoEC2{
+        
+        display: none;
+ 
+    }
+
+    .botaoEC22{
+        
+        display: none;
+    }
 }
 

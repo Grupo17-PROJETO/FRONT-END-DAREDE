@@ -34,7 +34,7 @@ function App() {
             <header>
                 <div className='corFundoH'>
 
-                    <img className='logo' src={Logo} alt="" />
+                    <img className='logo_header' src={Logo} alt="" />
 
                     <div className='nave'>
                         <a href="/MeusEquipamentos">Meus Equipamentos</a>
@@ -126,6 +126,7 @@ function App() {
 
         </div>
     );
+    
 
 
 }

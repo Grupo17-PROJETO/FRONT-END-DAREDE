@@ -147,3 +147,44 @@ box-shadow: 0 0 10px green;
   font-family: 'Montserrat Alternates', sans-serif;
 
 }
+
+@media screen and (max-width: 768px){
+
+  .fundob1{
+    display: none;
+  }
+
+  .bloco1{
+    display: none;
+  }
+
+  .bloco2{
+    display: none;
+  }
+
+  .bloco3{
+
+    width: 370px;
+    height: 400px;
+    background-color: black;
+    position: ;
+    margin-top: 59px;
+    margin-right: 320px;
+
+  }
+  
+
+  .centro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 77px;
+    padding-left: 120px;
+  }
+
+  .lado1{
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+
+}

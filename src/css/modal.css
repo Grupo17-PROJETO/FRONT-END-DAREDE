@@ -7,9 +7,8 @@
     left: 0;
     z-index: 10;
     background-color: rgba(0,0,0,0.8);
-    padding-top: 318px;
-    padding-left: 491px;
-
+    padding-top: 16%;
+    padding-left: 35%;
 
 }
 
@@ -158,5 +157,12 @@ padding-left: 40px;
     border-radius: 5px;
 
 
+}
+
+
+@media screen and (max-width: 768px){
+
+  
+   
 }
 

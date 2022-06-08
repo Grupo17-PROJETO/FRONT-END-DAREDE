@@ -1,6 +1,6 @@
 import '../../css/empresa.css'
 import { Component, useEffect, useState } from 'react';
-import Logo from '../../img/imgLogin/darede.png'
+import Logo1 from '../../img/imgLogin/darede.png'
 import sair from '../../img/imgCliente/sair.png'
 import axios from 'axios';
 import ganhos from '../../img/imgCliente/ganhos.png'
@@ -59,7 +59,7 @@ export default function MeusEquipamentos() {
             <header>
                 <div className='corFundoH'>
 
-                    <img className='logo' src={Logo} alt="" />
+                    <img className='logo_2' src={Logo1} alt="" />
 
                     <div className='nave'>
                         <a href="https://administradordarede.grafana.net/d/AWSEc2000/aws-ec2-01?orgId=1&from=now-24h&to=now&kiosk">Monitoramento EC2</a>
