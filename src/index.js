@@ -27,7 +27,7 @@ const Routing = (
       <Routes>
 
         {/* TELAS DE TODOS */}
-        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/" element={<Login/>}/>
         <Route path="/login" element={<Login/>}/>
 
         {/* TELAS DE ADM */}

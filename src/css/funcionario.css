@@ -279,18 +279,20 @@ margin-right: 20px;
 
 }
 
-.boneco_lista{
-
-    opacity: 30%;
-
-}
-
 
 .boneco img{
 
     justify-content: flex-start;
     width: 141px;
     margin-top: 325px;
+
+}
+
+
+.boneco_listagem img{
+
+    justify-content: flex-start;
+    width: 141px;
 
 }
 

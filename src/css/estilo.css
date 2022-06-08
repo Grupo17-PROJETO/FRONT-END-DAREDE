@@ -31,7 +31,7 @@
 }
 
 .lado1{
-  margin-top: 80px;
+  margin-top: 190px;
 }
 
 .fundob1{
@@ -112,6 +112,12 @@
   margin: 72px 120px;
   font-family: 'Montserrat Alternates', sans-serif;
   
+}
+
+.colocar_para_baixo{
+
+  margin-top: 100px;
+
 }
 
 

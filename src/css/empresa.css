@@ -123,6 +123,7 @@ margin-right: 20px;
 
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
 
@@ -289,10 +290,9 @@ margin-right: 20px;
 .boneco_lista img{
 
     justify-content: flex-start;
-    width: 900px;
-    margin: 7px;
-    
-
+    width: 640px;
+    margin-left: 222px;
+    margin-top: 187px;
 }
 
 .boneco_lista2 img{
@@ -331,11 +331,23 @@ margin-right: 20px;
 
 .blocoCentralPrincipal_Lista_CLientes2{
 
-    margin: 53px 86px;
-    height: 451px;
+    margin: 0px 86px;
+    height: 404px;
     padding-right: 15px;
     overflow: overlay;
 
+}
+
+.centro_cliente{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.descer{
+    margin-top: 118px;
 }
 
 .blocoCentralPrincipal_Lista_CLientes2::-webkit-scrollbar {
@@ -404,7 +416,7 @@ margin-right: 20px;
 
     height: 150px;
     width: 550px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     margin-bottom: 15px;
     border-radius: 10px;
     display: flex;
@@ -509,7 +521,7 @@ margin-right: 20px;
     margin-bottom: 43px;
     font-family: 'Montserrat Alternates', sans-serif;
     margin-left: 118px;
-    margin-top: 95px;
+    margin-top: 12px;
 
 
 }

@@ -3,21 +3,13 @@ import { Component, useEffect, useState } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
 import sair from '../../img/imgCliente/sair.png'
 import axios from 'axios';
+import ganhos from '../../img/imgCliente/ganhos.png'
 import empresa2 from '../../img/imgCliente/gif_empresa2.gif'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function MeusEquipamentos() {
-
-    (function (d, m) {
-        var kommunicateSettings =
-            { "appId": "52bdeedeba6b4aa21e99cc515d0a0cc8", "popupWidget": true, "automaticChatOpenOnNavigation": true };
-        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-        window.kommunicate = m; m._globals = kommunicateSettings;
-    })(document, window.kommunicate || {});
 
     const [inst, setInst] = useState('');
     const [inst1, setInst1] = useState('');
@@ -40,7 +32,7 @@ export default function MeusEquipamentos() {
             .then((res) => {
                 console.log(res);
                 const ec2 = res.data.data.status;
-                getEc2(ec2); 
+                getEc2(ec2);
             })
             .catch(error => console.error(`Erro: ${error}`));
     }
@@ -64,7 +56,7 @@ export default function MeusEquipamentos() {
 
     return (
         <div>
-            <header>
+           <header>
                 <div className='corFundoH'>
 
                     <img className='logo' src={Logo} alt="" />
@@ -78,100 +70,113 @@ export default function MeusEquipamentos() {
                 </div>
 
             </header>
-            <div className='divisaoPrinc2'>
+            <div className='divisaoPrin'>
 
-                <div className='boneco_lista2'>
-                    <img src={empresa2} alt="" />
-                </div>
-                <div className='centro_2'>
-                    <div className='divisao_listagem_cliente'>
-                        <h1 className='lista_do_map2'>Acompanhamento</h1>
+                <div className='divisaoFundo'>
+
+                    <div>
+                        <img className='imagem_lado_d' src={ganhos} alt="" />
                     </div>
-                    <div className='blocoCentralPrincipal_Lista_CLientes'>
 
-                        <div>
-
-                            <div >
-
-                                <form action='#'>
-                                    <label htmlFor="text"></label>
-                                    <p className='font'>Pausar</p>
-                                    <div className='divsao_acompanhamento'>
-
-                                        <div>
-                                            <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
-                                        </div>
-                                        <div>
-                                            <button className='botaozinho1'onClick={pararEc2}></button>
-                                        </div>
-
-                                    </div>
+                </div>
 
 
-                                </form>
+                <div className='Coluna_Linhas'>
+                    <div>
 
+                        <div className='divisao_listagem_cliente'>
+                            <h1 className='lista_do_map2'>Acompanhamento</h1>
+                        </div>
+                        <div className='blocoCentralPrincipal_Lista_CLientes'>
 
-                                <form action='#'>
-                                    <label htmlFor="text"></label>
-                                    <p className='font'>Ligar</p>
-                                    <div className='divsao_acompanhamento'>
+                            <div>
 
-                                        <div>
+                                <div >
 
-                                            <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+                                    <form action='#'>
+                                        <label htmlFor="text"></label>
+                                        <p className='font'>Pausar</p>
+                                        <div className='divsao_acompanhamento'>
+
+                                            <div>
+                                                <input className='input_busca2' type="text" name='desligar' value={inst} onChange={(event) => setInst(event.target.value)}></input>
+                                            </div>
+                                            <div>
+                                                <input type="button" className='botaozinho1' onClick={pararEc2} />
+                                                {/* <button className='botaozinho1'onClick={pararEc2}></button> */}
+                                            </div>
 
                                         </div>
 
-                                        <div>
-                                            <button className='botaozinho2'onClick={ligarEc2}></button>
+
+                                    </form>
+
+
+                                    <form action='#'>
+                                        <label htmlFor="text"></label>
+                                        <p className='font'>Ligar</p>
+                                        <div className='divsao_acompanhamento'>
+
+                                            <div>
+
+                                                <input className='input_busca2' type="text" name='texto' value={inst2} onChange={(event) => setInst2(event.target.value)}></input>
+
+                                            </div>
+
+                                            <div>
+                                                <input type="button" className='botaozinho2' onClick={ligarEc2} />
+                                                {/* <button className='botaozinho2'onClick={ligarEc2}></button> */}
+                                            </div>
+
                                         </div>
 
-                                    </div>
 
 
+                                    </form>
 
-                                </form>
+                                    <form action='#'>
+                                        <label htmlFor="text"></label>
+                                        <p className='font'>Estado</p>
+                                        <div className='divsao_acompanhamento'>
 
-                                <form action='#'>
-                                    <label htmlFor="text"></label>
-                                    <p className='font'>Estado</p>
-                                    <div className='divsao_acompanhamento'>
+                                            <div>
+                                                <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
+                                            </div>
+                                            <div>
+                                                <input className='botaozinho3' type="button" onClick={listarEc2} />
+                                            </div>
 
-                                        <div>
-                                            <input className='input_busca2' type="text" name='texto' value={inst1} onChange={(event) => setInst1(event.target.value)}></input>
                                         </div>
-                                        <div>
-                                            <input className='botaozinho3' type="button" onClick={listarEc2} />
-                                        </div>
-
-                                    </div>
 
 
-                                </form>
+                                    </form>
 
-                                {
-                                    ec2.map((res) => {
-                                        return (
-                                            <div className='blocoCentral_Lista_Clientes'>
-                                                <div key={res}>
-                                                    <div className="informacoes">
-                                                        <section className="separacao" >
-                                                            <ul>
-                                                                <li className='font'>Estado: {res}</li>
-                                                                {/* <li>Estado2: {res}</li>
+                                    {
+                                        ec2.map((res) => {
+                                            return (
+                                                <div className='blocoCentral_Lista_Clientes'>
+                                                    <div key={res}>
+                                                        <div className="informacoes">
+                                                            <section className="separacao" >
+                                                                <ul>
+                                                                    <li className='font'>Estado: {res}</li>
+                                                                    {/* <li>Estado2: {res}</li>
                                                                 <li>Estado3: {res}</li> */}
-                                                            </ul>
-                                                        </section>
+                                                                </ul>
+                                                            </section>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        )
-                                    })
-                                }
+                                            )
+                                        })
+                                    }
+                                </div>
                             </div>
+                            <ToastContainer />
                         </div>
-                        <ToastContainer />
+
                     </div>
+
 
                 </div>
 

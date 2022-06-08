@@ -15,8 +15,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 
-.fundo_Modal{
-
+.fundo_Modal {
     width: 551px;
     height: 317px;
     border: 3px solid black;
@@ -24,9 +23,8 @@
     background-color: white;
     justify-content: center;
     display: flex;
-    margin-top: -104px;
+    margin-top: -8px;
     border-radius: 5px;
-
 }
 
 
@@ -90,15 +88,17 @@ padding-left: 40px;
 
 .fundo_Modall{
 
-    width: 554px;
-    height: 323px;
-    border: 3px solid black;
-    position: absolute;
-    background-color: white;
-    justify-content: center;
-    display: flex;
-    margin-top: -104px;
-    border-radius: 5px;
+
+        width: 551px;
+        height: 317px;
+        border: 3px solid black;
+        position: absolute;
+        background-color: white;
+        justify-content: center;
+        display: flex;
+        margin-top: -8px;
+        border-radius: 5px;
+    
 }
 
 

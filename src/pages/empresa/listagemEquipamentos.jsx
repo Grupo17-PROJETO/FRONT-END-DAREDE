@@ -10,7 +10,7 @@ import sair from '../../img/imgCliente/sair.png'
 import chatboot from '../../img/imgCliente/icone_chat.png'
 import Modal_EC2 from "../../components/Modal_EC2";
 import 'react-toastify/dist/ReactToastify.css';
-
+import ganhos from '../../img/imgCliente/ganhos.png'
 
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
                 <div className='corFundoH'>
 
                     <img className='logo' src={Logo} alt="" />
-                    
+
                     <div className='nave'>
                         <a href="/MeusEquipamentos">Meus Equipamentos</a>
                         <a href="/" target="principal" ><img className='sair_empresa' src={sair} alt="" /></a>
@@ -49,14 +49,18 @@ function App() {
 
 
             </header>
-            <div className='divisaoPrinc2'>
 
 
-                <div className='boneco'>
-                    <img src={boneco} alt="" />
+            <div className='divisaoPrin'>
+
+                <div className='divisaoFundo'>
+                    <div>
+                        <img className='imagem_lado_d' src={ganhos} alt="" />
+                    </div>
+
                 </div>
 
-                <div className='blocoCentralPrincipal'>
+                <div className='Coluna_Linhas'>
 
                     <div>
                         <div className='divisao'>

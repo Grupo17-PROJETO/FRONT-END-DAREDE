@@ -62,11 +62,14 @@ export default function Login() {
 
   return (
     <div className='centro'>
+      
       <div className='lado1'>
         <h1 className='h3_login'>LOGIN</h1>
         <img className='fundob1' src={fundoB1} alt="" />
       </div>
-      <div >
+
+
+      <div className='colocar_para_baixo' >
         <div className='digitacao'>
           <div className='bloco1'></div>
           <div className='bloco2'></div>

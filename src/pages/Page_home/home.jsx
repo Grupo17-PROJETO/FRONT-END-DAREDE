@@ -35,81 +35,120 @@ function Home() {
 
         <div>
 
-         
+
 
 
 
 
             <div className="body_login_ferrari">
 
-            <header>
-                <div className='corFundoH_Home'>
+                <header>
+                    <div className='corFundoH_Home'>
 
                         <img className='logo' src={Logo} alt="" />
 
 
-                        <div className='nave2'>
-                            <a href="/login" ><img className='nave_logo' src={icone_login} alt="" /></a>
-                        </div>
-
-                </div>
-
-
-            </header>
-                <div className="content">
-
-                    <div className="slides">
-
-                        <input className="radios" type="radio" name="radio" id="slide1" />
-                        <input className="radios" type="radio" name="radio" id="slide2" />
-                        <input className="radios" type="radio" name="radio" id="slide3" />
-                        <input className="radios" type="radio" name="radio" id="slide4" />
-                        <input className="radios" type="radio" name="radio" id="slide5" />
-
-                        <div className="slide s1">
-
-                            <img src={imagem1} alt="VOLVO" />
-
-                        </div>
-
-                        <div className="slide">
-
-                            <img src={imagem2} alt="VOLVO" />
-
-                        </div>
-
-                        <div className="slide">
-
-                            <img src={imagem3} alt="VOLVO" />
-
-                        </div>
-
-                        <div className="slide">
-
-                            <img src={imagem4} alt="VOLVO" />
-
-                        </div>
-
-                        <div className="slide">
-
-                            <img src={imagem5} alt="VOLVO" />
-
-                        </div>
-
+                        <a href="/login">
+                            <div className='nave2'>
+                                <a href="/login" ><img className='nave_logo' src={icone_login} alt="" /></a>
+                            </div>
+                        </a>
 
                     </div>
 
+
+                </header>
+                <div className="salvacao">
+
+                    <div className="content">
+
+                        <div className="slides">
+
+                            <input className="radios" type="radio" name="radio" id="slide1" />
+                            <input className="radios" type="radio" name="radio" id="slide2" />
+                            <input className="radios" type="radio" name="radio" id="slide3" />
+                            <input className="radios" type="radio" name="radio" id="slide4" />
+                            <input className="radios" type="radio" name="radio" id="slide5" />
+
+                            <div className="slide s1">
+
+                                <img src={imagem1} alt="VOLVO" />
+
+                            </div>
+
+                            <div className="slide">
+
+                                <img src={imagem2} alt="VOLVO" />
+
+                            </div>
+
+                            <div className="slide">
+
+                                <img src={imagem3} alt="VOLVO" />
+
+                            </div>
+
+                            <div className="slide">
+
+                                <img src={imagem4} alt="VOLVO" />
+
+                            </div>
+
+                            <div className="slide">
+
+                                <img src={imagem5} alt="VOLVO" />
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div>
+
+                            <label className="bar" for="slide1">
+                                <img className="teste" src={imagem1} alt="" />
+                            </label>
+
+                        </div>
+
+                        <div>
+
+                            <label className="bar" for="slide2">
+                                <img className="teste" src={imagem2} alt="" />
+                            </label>
+
+                        </div>
+
+                        <div>
+
+                            <label className="bar" for="slide3">
+                                <img className="teste" src={imagem3} alt="" />
+                            </label>
+
+                        </div>
+                        <div>
+
+                            <label className="bar" for="slide4">
+                                <img className="teste" src={imagem4} alt="" />
+                            </label>
+
+                        </div>
+                        <div>
+
+                            <label className="bar" for="slide5">
+                                <img className="teste" src={imagem5} alt="" />
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
-                <div className="navigation">
 
-                    <label className="bar" for="slide1"></label>
-                    <label className="bar" for="slide2"></label>
-                    <label className="bar" for="slide3"></label>
-                    <label className="bar" for="slide4"></label>
-                    <label className="bar" for="slide5"></label>
-
-
-                </div>
 
 
 

@@ -4,14 +4,22 @@
 
 }
 
+.salvacao{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
 .body_login_ferrari{
     background-color: white;
-    background-image: url(../img/imgHome/fundo_ferrari.png);
+    /* background-image: url(../img/imgHome/fundo_ferrari.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top bottom;
     overflow: hidden;
-    height: 753px;
     
 }
 
@@ -89,11 +97,7 @@
 
     height: 595px;
     width: 1035px;
-    border-radius: 10px;
     overflow: hidden;
-    position: absolute;
-    top: 17%;
-    left: 30%;
 
 
 }
@@ -125,16 +129,18 @@
     top: 688px;
 }
 
+.teste{
+    width: 200px;
+}
+
 .bar{
 
 
     width: 70px;
     height: 20px;
-    border: 2px solid white;
-    border-radius: 5px;
-    margin: 6px;
     cursor: pointer;
     transition: .4s;
+    opacity: 85%;
 
 }
 
@@ -199,14 +205,66 @@
     margin-left: -80%;
 }
 
+.logo_home {
+    width: 117px;
+    height: 34px;
+    margin-bottom: 24px;
+    margin-left: 167px;
+    margin-top: 3px;
+}
 /* ::::::ROLAGEM DE IMAGEM = FIM:::::::: */
 
 @media screen and (max-width: 768px){
 
     .body_login_ferrari{
 
-        display: none;
+        background-image: none;
 
+    }
+
+    .slides{
+
+        
+
+    }
+
+    .corFundoH_Home{
+
+        width: 100%;
+        
+
+
+    }
+
+    .logo_home{
+        margin-left: 7px;
+        width: 29px;
+        height: 12px;
+        margin-top: 0px;
+        margin-bottom: 7px;
+
+        
+    }
+
+    .corFundoH_Home {
+        height: 20px;
+        width: 100%;
+        background-color: green;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+
+    .nave2 {
+        height: 20px;
+        /* margin-right: 144px; */
+        width: 15px;
+        background-color: #005C1A;
+    }
+
+    .nave_logo {
+        width: 26px;
+        margin-top: 17px;
     }
 
 }
