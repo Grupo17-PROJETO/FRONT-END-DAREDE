@@ -148,7 +148,7 @@ box-shadow: 0 0 10px green;
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 750px){
 
   .estilizacaoI {
     color: white;
@@ -194,7 +194,7 @@ box-shadow: 0 0 10px green;
     width: 75px;
     height: 96px;
     background-color: black;
-    position: ;
+    position: none;
     margin-top: -65px;
     margin-right: 366px;
 }
@@ -204,8 +204,8 @@ box-shadow: 0 0 10px green;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 2px;
-    padding-right: 165px;
+    margin-top: 0px;
+    padding-right: 0px;
   }
 
   .lado1 {
@@ -216,9 +216,9 @@ box-shadow: 0 0 10px green;
   .centro h1 {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 20px, Regular;
-    font-size: 12px;
+    font-size: 0px;
     font-style: normal;
-    margin-right: 111px;
+
 }
 
 .estilizacaoI input {
@@ -230,6 +230,7 @@ box-shadow: 0 0 10px green;
   padding-left: 1px;
   border: 1px solid;
   margin-left: 6px;
+  font-size: 4px;
 }
 
 #botao {
